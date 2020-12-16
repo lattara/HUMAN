@@ -1,3 +1,5 @@
+@import "/styles/custom.pallette.scss";
+
 .navContainer {
     height: 100%;
     width: 100%;
@@ -38,5 +40,41 @@
 
 .navIcon img {
     width: 45px;
+}
+
+//hide label in mobile
+.navIcon  {
+    span {
+        display: none;
+    }
+}
+
+//desktop
+
+@media (min-width: 768px) {
+
+    .bottomNav {
+        position: absolute;
+        left: 20px;
+        top: 40px;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-evenly;
+
+    }
+
+    // show label in desktop
+    .navIcon:hover  {
+        span {
+            display: inline-block;
+            font-family: $font-secondary;
+            margin-left: 20px;
+            font-size: 27px;
+        }
+    }
+
+    .navIcon img:hover {
+        width: 60px;
+    }
 
 }
