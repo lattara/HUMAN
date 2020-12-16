@@ -1,0 +1,43 @@
+.navContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;;
+}
+
+.navContainer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.topNav {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    width: 100%;
+    align-self: flex-start;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topNav img {
+    margin-right: 20px;
+}
+.bottomNav {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    justify-self: end;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.navIcon img {
+    width: 45px;
+
+}

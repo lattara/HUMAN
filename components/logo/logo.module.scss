@@ -1,0 +1,65 @@
+@import "/styles/custom.pallette.scss";
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.row {
+    height: 100vh;
+}
+
+.divider {
+    position: absolute;
+    top: 50%;
+    border-top: 15px solid;
+    border-color: $black;
+}
+
+.logo {
+    font-size: 5em;
+    height: 90px;
+    font-family: $font-primary;
+    color: $black;
+    text-align: right;  
+
+}
+
+.blockTexture {
+    background: url("../../public/brown-texture.jpg");
+    background-size: contain;
+    height: 50vh;
+    width: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.yellowBlock {
+    background: $primary-yellow;
+    height: 51vh;
+    width: 100vh;
+    padding: 0px;
+
+}
+
+.undertitle {
+    font-family: $font-secondary;
+    text-align: right;
+    font-size: 1.2em;
+    padding-right: 50px;
+}
+
+//desktop
+
+@media (min-width: 768px) { 
+    .logo {
+        font-size: 10em;
+        height: 175px;
+    }
+    .undertitle {
+        font-family: $font-secondary;
+        text-align: right;
+        font-size: 2em;
+    }
+
+ }
