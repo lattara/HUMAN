@@ -1,15 +1,11 @@
 import Head from 'next/head'
 import Logo from '../components/logo/Logo'
-
-import styles from '../styles/Home.module.scss'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from '../components/navigation/nav'
 import React from 'react';
-
+import Nav from '../components/navigation/Nav';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Human bijoux</title>
         <link
@@ -20,14 +16,7 @@ export default function Home() {
        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet"></link>
       </Head>
       <main>
-      
-        <Logo isMain={true}></Logo>
-        <Nav/>
-
-      <div>
-      
-      </div>
       </main>
-    </div>
+    </>
   )
 }
