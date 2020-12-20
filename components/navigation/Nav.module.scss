@@ -1,0 +1,69 @@
+@import "/styles/custom.pallette.scss";
+
+
+.navIcon img {
+    width: 33px;
+  }
+
+  .topNav{
+    display: flex;
+    flex-direction: row;  
+    position: fixed;
+    top:10px;
+    right: 30px;
+  }
+
+  .bottomNav {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      position: fixed;
+      bottom: 10px;
+      justify-content: space-around;
+  }
+
+//hide label in mobile
+.navIcon  {
+    span {
+        display: none;
+    }
+}
+
+//desktop
+
+@media (min-width: 768px) {
+
+    .bottomNav{
+        flex-direction: column;
+        width: 60px;
+        position: fixed;
+        left: 0px;
+        top: 50px;
+        margin: auto;
+    }
+
+    .bottomNav li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .topNav li:hover {
+        img {
+            width: 50px;
+        }
+    }
+
+    // show label in desktop
+    .navIcon:hover  {
+        span {
+            position: absolute;
+            left: 50px;
+            display: inline;
+            font-family: $font-secondary;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+    
+    }
+
+}
