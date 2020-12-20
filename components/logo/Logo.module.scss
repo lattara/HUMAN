@@ -9,12 +9,7 @@
     height: 100vh;
 }
 
-.divider {
-    position: absolute;
-    top: 50%;
-    border-top: 15px solid;
-    border-color: $black;
-}
+
 
 .logo {
     font-size: 5em;
@@ -25,7 +20,7 @@
 
 }
 
-.blockTexture {
+.textureBlock {
     background: url("../../public/brown-texture.jpg");
     background-size: contain;
     height: 50vh;
