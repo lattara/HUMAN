@@ -1,60 +1,69 @@
 @import "/styles/custom.pallette.scss";
 
 .container {
-    height: 100vh;
+    height: fit-content;
     width: 100%;
+    position: absolute;
+    text-align: right;
+    top:60px;
 }
 
-.row {
-    height: 100vh;
+.containerMain {
+    width: 100%;
+    position: absolute;
+    top:41vh;
+    text-align: right;
 }
 
-
-
-.logo {
-    font-size: 5em;
+.logoMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-size: 5.5em;
     height: 90px;
     font-family: $font-primary;
     color: $black;
-    text-align: right;  
-
 }
 
-.textureBlock {
-    background: url("../../public/brown-texture.jpg");
-    background-size: contain;
-    height: 50vh;
-    width: 100vh;
-    display: flex;
-    align-items: flex-end;
+.logo {
+    font-size: 1.5em;
+    height: 90px;
+    font-family: $font-primary;
+    color: $black;  
 }
 
-.yellowBlock {
-    background: $primary-yellow;
-    height: 51vh;
-    width: 100vh;
-    padding: 0px;
-
+.undertitleMain {
+    width: 100%;
+    font-family: $font-secondary;
+    font-size: 17px;
+    padding-right: 35px;
 }
 
 .undertitle {
     font-family: $font-secondary;
+    font-size: 17px;
     text-align: right;
-    font-size: 1.2em;
-    padding-right: 50px;
+    padding-right: 15px;
 }
 
 //desktop
 
 @media (min-width: 768px) { 
-    .logo {
-        font-size: 10em;
-        height: 175px;
+    .containerMain {
+        top:37%;
     }
-    .undertitle {
-        font-family: $font-secondary;
-        text-align: right;
-        font-size: 2em;
+    
+    .logoMain {
+        font-size: 7.5em;
     }
+
+    .undertitleMain {
+        padding-right: 98px;
+        line-height: 0px;
+        font-size: 20px;
+    }
+    
+    
 
  }

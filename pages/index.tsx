@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Logo from '../components/logo/Logo'
 import React from 'react';
-import Nav from '../components/navigation/Nav';
 
 export default function Home() {
   return (
