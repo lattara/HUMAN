@@ -20,7 +20,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-    font-size: 5.5em;
+    font-size: 3.5em;
     height: 90px;
     font-family: $font-primary;
     color: $black;
@@ -36,8 +36,9 @@
 .undertitleMain {
     width: 100%;
     font-family: $font-secondary;
-    font-size: 17px;
+    font-size: 12px;
     padding-right: 35px;
+    height: inherit;
 }
 
 .undertitle {
@@ -51,7 +52,7 @@
 
 @media (min-width: 768px) { 
     .containerMain {
-        top:37%;
+        top:31vh;
     }
     
     .logoMain {
