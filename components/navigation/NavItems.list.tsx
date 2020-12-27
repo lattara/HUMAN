@@ -21,7 +21,7 @@ export const navItems: navBarItem[] = [
     {
         id: 3,
         label: 'Colliers',
-        link: '',
+        link: 'colliers',
         icon: "necklace.png"
     },
     {

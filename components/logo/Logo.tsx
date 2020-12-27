@@ -24,7 +24,9 @@ function Logo(props) {
 
     const renderOtherPage = <div className={`${styles.container} row`}>
         <div className={styles.logo}>
-            HUMAN. <div className={styles.undertitle}>{props.undertitle}</div>
+            
+            HUMAN<span className={styles.undertitle}>{props.undertitle}</span>
+            <div className={styles.divider}></div>
         </div>
     </div>
 
