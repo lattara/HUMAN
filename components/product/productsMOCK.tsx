@@ -7,7 +7,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 37,
-        image: 'https://picsum.photos/200',
+        image: 'https://picsum.photos/id/237/300/400',
 
     },
     {
@@ -18,7 +18,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 32,
-        image: 'https://picsum.photos/200',
+        image: 'https://picsum.photos/id/237/300/400',
         
     },
     {
@@ -29,7 +29,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 32,
-        image: 'https://picsum.photos/200',
+        image: 'https://picsum.photos/id/237/300/400',
         
     },
     {
@@ -40,7 +40,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 26,
-        image: 'https://picsum.photos/200',
+        image: 'https://picsum.photos/id/237/300/400',
         
     },
     {
@@ -51,7 +51,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 36,
-        image: 'https://picsum.photos/200',
+        image: 'https://picsum.photos/id/237/300/400',
         
     }
 

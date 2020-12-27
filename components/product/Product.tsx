@@ -11,10 +11,8 @@ function Product() {
         infinite: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         initialSlide: 0,
-        centerMode: true,
-        centerPadding: '40px',
         responsive: [
             {
                 breakpoint: 1024,
@@ -22,8 +20,7 @@ function Product() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true,
-                    swipeToSlide: false
+                    dots: true
                 }
             },
             {
@@ -31,16 +28,14 @@ function Product() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2,
-                    swipeToSlide: true,
+                    initialSlide: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    swipeToSlide: true,
+                    slidesToScroll: 1
                 }
             }
         ]
@@ -49,7 +44,15 @@ function Product() {
         <Slider {...carouselSettings} className={styles.container}>
             {
                 productsMock.map(product =>
-                        <img key={product.id} src={product.image} />
+                    <div className={styles.cardContainer}>
+                        <img className={styles.image} key={product.id} src={product.image} />
+                        <ul>
+                            <li>{product.name}</li>
+                            <li>{product.description}</li>
+                            <li>{product.price}</li>
+                            <li>{product.tags}</li>
+                        </ul>
+                    </div>
                 )
             }
         </Slider>

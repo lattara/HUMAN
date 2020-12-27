@@ -31,6 +31,18 @@ h1 {
   display: none;
 }
 
+  /* CAROUSEL STYLES */
+  .slick-slide[aria-hidden="true"] {
+    opacity: 0.5;
+}
+
+.slick-slide{
+  padding:10px 0px 10px 0px;
+  justify-content: center;
+  display: flex !important;
+
+}
+
 
 
 
