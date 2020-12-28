@@ -36,11 +36,18 @@ h1 {
     opacity: 0.5;
 }
 
-.slick-slide{
-  padding:10px 0px 10px 0px;
+.slick-slide>div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 20px 20px;
   justify-content: center;
-  display: flex !important;
+}
 
+.slick-dots {
+  position: relative;
+}
+.slick-dots li.slick-active button:before {
+  font-size: 10px;
 }
 
 

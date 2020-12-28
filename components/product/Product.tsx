@@ -8,11 +8,10 @@ function Product() {
 
     const carouselSettings = {
         dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
+        slidesToShow: 2,
+        slidesToScroll:2,
+        autoplay: false,
+        autoplaySpeed:3000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -40,19 +39,23 @@ function Product() {
             }
         ]
     };
+
     return (
         <Slider {...carouselSettings} className={styles.container}>
             {
                 productsMock.map(product =>
-                    <div className={styles.cardContainer}>
+                    <>
                         <img className={styles.image} key={product.id} src={product.image} />
                         <ul>
-                            <li>{product.name}</li>
-                            <li>{product.description}</li>
-                            <li>{product.price}</li>
-                            <li>{product.tags}</li>
+                            <li className={styles.name}>{product.name}</li>
+                            <li className={styles.description}>{product.description}</li>
+                            <li className={styles.price}>{product.price},00€</li>
+                            {product.tags.map(tag => <span className={styles.tag}>{` ${tag}`}</span>)}
                         </ul>
-                    </div>
+                        <div>
+                            <button>Buy</button> <button>More details</button>
+                        </div>
+                    </>
                 )
             }
         </Slider>

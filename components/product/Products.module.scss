@@ -1,9 +1,33 @@
+@import "../../styles/custom.pallette.scss";
 
 .container {
     width: 100%;
     position: absolute;
     top:15%;
     overflow: hidden;
+    line-height: 30px;
+}
+
+.name {
+    font-family: $font-primary;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.description {
+    font-family: $font-secondary;
+}
+
+.price {
+    font-size: 35px;
+}
+
+.tag {
+    color:$black;
+    border: 1px solid $black;
+    padding: 4px;
+    margin-left: 5px;
+    border-radius: 7px;
 }
 
 
