@@ -44,8 +44,10 @@ h1 {
 }
 
 .slick-dots {
-  position: relative;
+  position: relative !important;
+  bottom: 0px !important;
 }
+
 .slick-dots li.slick-active button:before {
   font-size: 10px;
 }

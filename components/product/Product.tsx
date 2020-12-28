@@ -9,9 +9,10 @@ function Product() {
     const carouselSettings = {
         dots: true,
         slidesToShow: 2,
-        slidesToScroll:2,
+        slidesToScroll: 2,
         autoplay: false,
-        autoplaySpeed:3000,
+        autoplaySpeed: 3000,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -41,24 +42,22 @@ function Product() {
     };
 
     return (
+        <>
         <Slider {...carouselSettings} className={styles.container}>
             {
                 productsMock.map(product =>
-                    <>
-                        <img className={styles.image} key={product.id} src={product.image} />
-                        <ul>
+                        <ul className={styles.card}>
+                            <li><img className={styles.image} key={product.id} src={product.image} /></li>
                             <li className={styles.name}>{product.name}</li>
                             <li className={styles.description}>{product.description}</li>
                             <li className={styles.price}>{product.price},00€</li>
-                            {product.tags.map(tag => <span className={styles.tag}>{` ${tag}`}</span>)}
+                            <li className={styles.tags}>{product.tags.map(tag => <span className={styles.tag} key={product.tags.indexOf(tag)}>{` ${tag}`}</span>)}</li>
+                            <li className={styles.buttons}><button>Buy</button> <button>More details</button></li> 
                         </ul>
-                        <div>
-                            <button>Buy</button> <button>More details</button>
-                        </div>
-                    </>
                 )
             }
         </Slider>
+        </>
     )
 }
 

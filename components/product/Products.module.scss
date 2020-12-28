@@ -8,8 +8,17 @@
     line-height: 30px;
 }
 
+.card li:first-child img {
+    margin: auto;
+}
+
+.name, .description, .price, .tags, .buttons {
+    margin-left: 30px;
+}
+
 .name {
     font-family: $font-primary;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -20,16 +29,13 @@
 
 .price {
     font-size: 35px;
+    padding: 10px 0px 10px 0px;
 }
 
 .tag {
     color:$black;
     border: 1px solid $black;
-    padding: 4px;
-    margin-left: 5px;
+    padding: 4px 8px 4px 8px;
+    margin: 0px 10px 0px 0px;
     border-radius: 7px;
 }
-
-
-
-
