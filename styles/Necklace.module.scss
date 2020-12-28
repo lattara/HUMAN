@@ -9,3 +9,11 @@
     align-items: flex-end
 }
 
+@media (min-width: 768px) { 
+
+    .container {
+        background-image: none;
+    }
+    
+}
+

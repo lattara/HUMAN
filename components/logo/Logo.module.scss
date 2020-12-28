@@ -15,6 +15,10 @@
     border-top: 3px solid $black;
 }
 
+.dividerMobile {
+    display: none;
+}
+
 
 .containerMain {
     width: 100%;
@@ -59,20 +63,24 @@
 //desktop
 
 @media (min-width: 768px) { 
-    .containerMain {
-        top:31vh;
+
+    .container {
+        position: fixed;
+        top:30%;;
     }
-    
-    .logoMain {
-        font-size: 7.5em;
+    .logo {
+        font-size: 150px;
     }
 
-    .undertitleMain {
-        padding-right: 98px;
-        line-height: 0px;
-        font-size: 20px;
+    .divider {
+        display: none;
     }
-    
-    
 
+    .dividerMobile {
+        display: block;
+        border-top: 10px solid $black;
+        width: 70%;
+        float: right;
+
+    }
  }

@@ -25,9 +25,10 @@ function Logo(props) {
     const renderOtherPage = <div className={`${styles.container} row`}>
         <div className={styles.logo}>
             
-            HUMAN<span className={styles.undertitle}>{props.undertitle}</span>
+            HUMAN <span className={styles.undertitle}>{props.undertitle}</span>
             <div className={styles.divider}></div>
         </div>
+        <div className={styles.dividerMobile}></div>
     </div>
 
 

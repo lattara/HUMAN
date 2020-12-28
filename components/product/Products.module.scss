@@ -39,3 +39,27 @@
     margin: 0px 10px 0px 0px;
     border-radius: 7px;
 }
+
+// DESKTOP
+
+@media (min-width: 768px) { 
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .card {
+        max-width: 250px;  
+    }
+
+    .name, .description, .price, .tags, .buttons {
+        display: none;
+    }
+
+    .card{
+        width: fit-content;
+    }
+    
+}

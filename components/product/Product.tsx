@@ -8,36 +8,48 @@ function Product() {
 
     const carouselSettings = {
         dots: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
         autoplay: false,
+        infinite: false,
         autoplaySpeed: 3000,
         arrows: false,
+        slidesToShow: 6,
+        rows: 1,
         responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    rows: 1,
+                }
+            },
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    rows: 1,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    rows: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    rows: 1,
                 }
             }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
         ]
     };
 
@@ -46,6 +58,7 @@ function Product() {
         <Slider {...carouselSettings} className={styles.container}>
             {
                 productsMock.map(product =>
+                    
                         <ul className={styles.card}>
                             <li><img className={styles.image} key={product.id} src={product.image} /></li>
                             <li className={styles.name}>{product.name}</li>

@@ -51,6 +51,41 @@ export const productsMock = [
         price: 36,
         image: 'https://picsum.photos/250/300',
         
+    },
+    {
+        id:6,
+        name: 'Product 6',
+        description: 'Description of the product in 2 lines of fext',
+        isSold: false,
+        category: 'necklace',
+        tags: ['tag1','tag2', 'tag3'],
+        price: 36,
+        image: 'https://picsum.photos/250/300',
+        
+    },
+
+    {
+        id:7,
+        name: 'Product 7',
+        description: 'Description of the product in 2 lines of fext',
+        isSold: false,
+        category: 'necklace',
+        tags: ['tag1','tag2', 'tag3'],
+        price: 36,
+        image: 'https://picsum.photos/250/300',
+        
+    },
+
+    {
+        id:8,
+        name: 'Product 7',
+        description: 'Description of the product in 2 lines of fext',
+        isSold: false,
+        category: 'necklace',
+        tags: ['tag1','tag2', 'tag3'],
+        price: 36,
+        image: 'https://picsum.photos/250/300',
+        
     }
 
 ]
