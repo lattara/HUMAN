@@ -27,6 +27,10 @@ h1 {
   color: $black;
 }
 
+p {
+  margin: 0px;
+}
+
 .cursor {
   display: none;
 }
@@ -70,9 +74,10 @@ h1 {
   }
 
   .slick-slider {
-    position: absolute !important;
-    bottom: 0px !important;
+    width: 75% !important;
   }
+
+  
 
 }
 

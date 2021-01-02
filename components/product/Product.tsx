@@ -5,6 +5,7 @@ import styles from './Products.module.scss'
 
 
 function Product() {
+    // it is necessary to load images dynamically to resolve a bug in the Slick Slider package
 
     const carouselSettings = {
         dots: true,
@@ -12,21 +13,20 @@ function Product() {
         infinite: false,
         autoplaySpeed: 3000,
         arrows: false,
-        slidesToShow: 6,
+        slidesToShow: Math.min(productsMock.length, 4),
         rows: 1,
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 1800,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: Math.min(productsMock.length, 4),
                     slidesToScroll: 1,
-                    rows: 1,
                 }
             },
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: Math.min(productsMock.length, 5),
                     slidesToScroll: 1,
                     rows: 1,
                 }
@@ -34,7 +34,7 @@ function Product() {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: Math.min(productsMock.length, 2),
                     slidesToScroll: 1,
                     rows: 1,
                 }
@@ -42,7 +42,7 @@ function Product() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: Math.min(productsMock.length, 1),
                     slidesToScroll: 1,
                     rows: 1,
                 }

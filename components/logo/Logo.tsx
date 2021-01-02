@@ -18,17 +18,18 @@ function Logo(props) {
                             .pauseFor(2500)
                             .start()
                     }} />
-                <div className={styles.undertitleMain}>Bijoux au pieres natureles</div>
+                <div className={styles.secondTitleMain}>Bijoux au pieres natureles</div>
             </div>
         </div>
 
     const renderOtherPage = <div className={`${styles.container} row`}>
         <div className={styles.logo}>
             
-            HUMAN <span className={styles.undertitle}>{props.undertitle}</span>
-            <div className={styles.divider}></div>
+            HUMAN<span className={styles.secondTitle}>{props.secondTitle}</span>
+            <div className={styles.dividerMobile}></div>
+            <p className={styles.undertitle}>{props.undertitle}</p>
         </div>
-        <div className={styles.dividerMobile}></div>
+        <div className={styles.divider}></div>
     </div>
 
 

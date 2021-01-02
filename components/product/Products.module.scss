@@ -45,9 +45,10 @@
 @media (min-width: 768px) { 
 
     .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        height: fit-content;
+        position: absolute;
+        top:unset;
+        bottom: 50px;
     }
 
     .card {

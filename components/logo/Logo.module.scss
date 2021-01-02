@@ -8,14 +8,14 @@
     top:60px;
 }
 
-.divider {
+.dividerMobile {
     width: 100%;
     width: 70%;
     float: right;
     border-top: 3px solid $black;
 }
 
-.dividerMobile {
+.divider {
     display: none;
 }
 
@@ -45,7 +45,7 @@
     color: $black;  
 }
 
-.undertitleMain {
+.secondTitleMain {
     width: 100%;
     font-family: $font-secondary;
     font-size: 12px;
@@ -53,11 +53,15 @@
     height: inherit;
 }
 
-.undertitle {
+.secondTitle {
     font-family: $font-secondary;
     font-size: 17px;
     text-align: right;
     padding-right: 15px;
+}
+
+.undertitle {
+    display: none;
 }
 
 //desktop
@@ -66,21 +70,42 @@
 
     .container {
         position: fixed;
-        top:30%;;
+        top:25%;
     }
     .logo {
         font-size: 150px;
     }
 
-    .divider {
+    .dividerMobile  {
         display: none;
     }
 
-    .dividerMobile {
+    .divider{
         display: block;
         border-top: 10px solid $black;
-        width: 70%;
+        width: 60%;
         float: right;
-
     }
+
+    .logo {
+        height: 130px;
+        text-align: right;
+    }
+
+    .secondTitle {
+        font-family: $font-secondary;
+        font-size: 45px;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .undertitle {
+        display: block;
+        font-size: 15px;
+        padding: 0px 15px 10px 40%;
+    }
+
+    
+
+    
  }
