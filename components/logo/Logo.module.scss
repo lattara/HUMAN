@@ -4,33 +4,44 @@
 
 .logoMain {
     font-size: 3.5em;
-    height: 50px;
     font-family: $font-primary;
     color: $black;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    line-height: 0.7;
+    position: relative;
+    top: 10px;
+    right: 20px;
 }
 
-.logoMain:first-child {
-    width: 100vw;
-    text-align: right;
+.dividerMain {
+    border-top: 5px solid $black;
 }
 
 .secondTitleMain {
     font-family: $font-secondary;
     font-size: 12px;
-    padding-right: 10px;
 }
 
+// render other pages styles
 
 .logoOtherPages {
+    padding: 0px;
     height: 20px;
     font-family: $font-primary;
-    color: $black;
-    
+    color: $black;   
+    text-align: right;
 }
 
 .productCategory {
-    
+    padding: 0px;
+    font-size: 12px;
+    font-family: $font-secondary;
+    margin-top: 4px;
 }
+
+
 
 @media (min-width: 768px) { 
 
@@ -67,13 +78,6 @@
         display: none;
     }
 
-    .divider{
-        display: block;
-        border-top: 10px solid $black;
-        width: 60%;
-        float: right;
-    }
-
     .logo {
         height: 130px;
         text-align: right;
@@ -84,9 +88,5 @@
         display: block;
         font-size: 15px;
         padding: 0px 15px 10px 40%;
-    }
-
-    
-
-    
+    }    
  }

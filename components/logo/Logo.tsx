@@ -6,29 +6,32 @@ import { Container, Row, Col } from 'react-bootstrap';
 function Logo(props) {
 
     const renderMainPage =
-        <Col className={styles.logoMain}>
-            <Row>
-            <Typewriter options={{
-                cursorClassName: 'cursor',
-                autoStart: true,}}
-                onInit={(typewriter) => {
-                    typewriter.typeString('HUMAN')
-                        .pauseFor(700)
-                    typewriter.typeString('. ')
+        <Col>
+            <Row className={styles.logoMain}>
+                <Typewriter options={{
+                    cursorClassName: 'cursor',
+                    autoStart: true,
+                }}
+                    onInit={(typewriter) => {
+                        typewriter.typeString('HUMAN')
+                            .pauseFor(700)
+                        typewriter.typeString('.')
                         .pauseFor(2500)
                         .start()}} />
-             <Col xs={12} className={styles.secondTitleMain}>Bijoux au pieres natureles</Col>    
-                </Row>       
+                <Col xs={12} className={styles.dividerMain}></Col>
+                <Col xs={12} className={styles.secondTitleMain}>Bijoux au pieres natureles</Col>    
+            </Row>       
         </Col>
              
 
     const renderOtherPage = 
-    <>
+    <Col>
         <Row>
-            <Col xs={6}>HUMAN</Col> 
-            <Col xs={6}>{props.productCategory}</Col>
+            <Col xs={7} className={styles.logoOtherPages}>HUMAN</Col> 
+            <Col xs={4} className={styles.productCategory}>{props.productCategory}</Col>
+            <div className={styles.dividerOtherPages}></div>
         </Row>
-    </>
+    </Col>
 
 
     return (
