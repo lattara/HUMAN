@@ -1,72 +1,59 @@
 @import "/styles/custom.pallette.scss";
 
-.container {
-    height: fit-content;
-    width: 100%;
-    position: absolute;
-    text-align: right;
-    top:60px;
-}
-
-.dividerMobile {
-    width: 100%;
-    width: 70%;
-    float: right;
-    border-top: 3px solid $black;
-}
-
-.divider {
-    display: none;
-}
-
-
-.containerMain {
-    width: 100%;
-    position: absolute;
-    top:41vh;
-    text-align: right;
-}
+// render main page styles
 
 .logoMain {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
     font-size: 3.5em;
-    height: 90px;
+    height: 50px;
     font-family: $font-primary;
     color: $black;
 }
 
-.logo {
-    font-size: 1.5em;
-    height: 90px;
-    font-family: $font-primary;
-    color: $black;  
+.logoMain:first-child {
+    width: 100vw;
+    text-align: right;
 }
 
 .secondTitleMain {
-    width: 100%;
     font-family: $font-secondary;
     font-size: 12px;
-    padding-right: 35px;
-    height: inherit;
+    padding-right: 10px;
 }
 
-.secondTitle {
-    font-family: $font-secondary;
-    font-size: 17px;
-    text-align: right;
-    padding-right: 15px;
+
+.logoOtherPages {
+    height: 20px;
+    font-family: $font-primary;
+    color: $black;
+    
 }
 
-.undertitle {
-    display: none;
+.productCategory {
+    
 }
-
-//desktop
 
 @media (min-width: 768px) { 
+
+    .logoMain {
+        font-size: 6.5em;
+        height: 90px;
+        font-family: $font-primary;
+        color: $black;
+    }
+    
+    .secondTitle {
+        font-family: $font-secondary;
+        font-size: 45px;
+        text-align: right;
+        padding-right: 15px;
+    }
+
+    .secondTitleMain {
+        font-family: $font-secondary;
+        font-size: 0.2em;
+        padding-right: 40px;
+    }
+    
 
     .container {
         position: fixed;
@@ -92,12 +79,6 @@
         text-align: right;
     }
 
-    .secondTitle {
-        font-family: $font-secondary;
-        font-size: 45px;
-        text-align: right;
-        padding-right: 15px;
-    }
 
     .undertitle {
         display: block;

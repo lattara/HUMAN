@@ -1,15 +1,19 @@
 import React from 'react'
 import Logo from '../components/logo/Logo'
 import styles from '../styles/Home.module.scss'
-import Image from 'next/image'
+import { Container, Row, Col} from 'react-bootstrap';
+
 function home() {
     return (
-            <div className={styles.container}>
-                <Logo isMain={true}/>
-                <div className={styles.divider}></div>
-                <div className={styles.yellowBlock}></div>   
-            </div>      
-    )   
+        <Container fluid> 
+            <Row className={styles.textureBlock}>
+            <Logo isMain={true} />  
+            </Row>
+            <div className={styles.divider}></div>
+            <Row className={styles.yellowBlock}>
+            </Row>
+        </Container>
+    )
 }
 
 export default home
