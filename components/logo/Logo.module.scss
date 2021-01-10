@@ -11,8 +11,8 @@
     text-align: right;
     line-height: 0.7;
     position: relative;
-    top: 10px;
-    right: 20px;
+    top: 20px;
+    width: 100vw;
 }
 
 .dividerMain {
@@ -22,41 +22,52 @@
 .secondTitleMain {
     font-family: $font-secondary;
     font-size: 12px;
+    line-height: 20px;
 }
 
 // render other pages styles
 
 .logoOtherPages {
-    padding: 0px;
-    height: 20px;
+    font-size: 20px;
     font-family: $font-primary;
     color: $black;   
     text-align: right;
+    position: relative;
+    line-height: 0.9;
+    text-align: right;
+    top:60px;
 }
 
 .productCategory {
     padding: 0px;
-    font-size: 12px;
+    font-size: 15px;
     font-family: $font-secondary;
     margin-top: 4px;
+    text-align: right;
 }
 
+.dividerOtherPages {
+    border-top: 5px solid $black;
+    width: 100%;
+    
+}
 
 
 @media (min-width: 768px) { 
 
+    // main page
+
     .logoMain {
-        font-size: 6.5em;
-        height: 90px;
-        font-family: $font-primary;
-        color: $black;
+        font-size: 10em;
+        height: 135px;
+    }
+
+    .dividerMain {
+        border-top: 10px solid $black;
     }
     
-    .secondTitle {
-        font-family: $font-secondary;
-        font-size: 45px;
-        text-align: right;
-        padding-right: 15px;
+    .secondTitleMain {
+        margin: 5px 25px 10px 0px;
     }
 
     .secondTitleMain {
@@ -65,28 +76,12 @@
         padding-right: 40px;
     }
     
-
-    .container {
-        position: fixed;
-        top:25%;
-    }
     .logo {
         font-size: 150px;
     }
 
-    .dividerMobile  {
-        display: none;
-    }
-
-    .logo {
-        height: 130px;
-        text-align: right;
-    }
 
 
-    .undertitle {
-        display: block;
-        font-size: 15px;
-        padding: 0px 15px 10px 40%;
-    }    
+
+
  }

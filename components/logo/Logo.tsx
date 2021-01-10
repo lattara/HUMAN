@@ -1,14 +1,13 @@
 import React from 'react'
 import styles from "./Logo.module.scss"
 import Typewriter from 'typewriter-effect';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 function Logo(props) {
 
     const renderMainPage =
-        <Col>
             <Row className={styles.logoMain}>
-                <Typewriter options={{
+                {/* <Typewriter options={{
                     cursorClassName: 'cursor',
                     autoStart: true,
                 }}
@@ -17,19 +16,20 @@ function Logo(props) {
                             .pauseFor(700)
                         typewriter.typeString('.')
                         .pauseFor(2500)
-                        .start()}} />
+                        .start()}} /> */}
+                        HUMAN
                 <Col xs={12} className={styles.dividerMain}></Col>
                 <Col xs={12} className={styles.secondTitleMain}>Bijoux au pieres natureles</Col>    
             </Row>       
-        </Col>
-             
-
+ 
     const renderOtherPage = 
     <Col>
-        <Row>
-            <Col xs={7} className={styles.logoOtherPages}>HUMAN</Col> 
-            <Col xs={4} className={styles.productCategory}>{props.productCategory}</Col>
-            <div className={styles.dividerOtherPages}></div>
+        <Row noGutters className={styles.logoOtherPages}>
+            <Col xs={9} sm={9} md={10} lg={10} xl={10}>HUMAN</Col> 
+            <div>
+            <Col xs={3} sm={3} md={2} lg={2} xl={2} className={styles.productCategory}>{props.productCategory}</Col>
+            </div>
+            <Col xs={12} className={styles.dividerOtherPages}></Col>
         </Row>
     </Col>
 
