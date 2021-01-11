@@ -90,6 +90,8 @@
         height: 35vh;
         display: flex;
         align-content: flex-end;
+        text-align: left;
+        width: fit-content;
         width: 60%;
         justify-content: right;
     }
@@ -104,7 +106,8 @@
     }
 
     .productCategory {
-        font-size: 0.4em ;
+        font-size: 0.4em;
+        margin-left: 35px;
     }
 
     .undertitle {

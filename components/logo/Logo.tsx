@@ -24,7 +24,7 @@ function Logo(props) {
     const renderOtherPage = 
         <Col className = {styles.otherPages}>
         <Row noGutters className={styles.logoOtherPages}>
-            <Col xs={9} sm={9} md={10} lg={6} xl={6}>HUMAN</Col> 
+            <Col xs={9} sm={9} md={10} lg={4} xl={4}>HUMAN</Col> 
             <div>
             <Col xs={3} sm={3} md={2} lg={6} xl={6} className={styles.productCategory}>{props.productCategory}</Col>
             </div>
