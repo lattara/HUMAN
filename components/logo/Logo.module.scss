@@ -53,6 +53,11 @@
     
 }
 
+.undertitle {
+    display: none;
+}
+
+
 @media (min-width: 992px) { 
 
     // main page
@@ -69,10 +74,10 @@
     .secondTitleMain {
         font-family: $font-secondary;
         font-size: 0.2em;
-        padding-right: 40px;
+        padding-right: 60px;
         margin: 10px 0px 0px 0px;
     }
-
+ 
     // other pages
 
     .otherPages {
@@ -100,6 +105,11 @@
 
     .productCategory {
         font-size: 0.4em ;
+    }
+
+    .undertitle {
+        font-size: 10px;
+        display: block;
     }
  
  }

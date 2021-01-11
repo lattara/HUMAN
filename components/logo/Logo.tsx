@@ -7,7 +7,7 @@ function Logo(props) {
 
     const renderMainPage =
             <Row className={styles.logoMain}>
-                {/* <Typewriter options={{
+                <Typewriter options={{
                     cursorClassName: 'cursor',
                     autoStart: true,
                 }}
@@ -16,8 +16,7 @@ function Logo(props) {
                             .pauseFor(700)
                         typewriter.typeString('.')
                         .pauseFor(2500)
-                        .start()}} /> */}
-                        HUMAN
+                        .start()}} /> 
                 <Col xs={12} className={styles.dividerMain}></Col>
                 <Col xs={12} className={styles.secondTitleMain}>Bijoux au pieres natureles</Col>    
             </Row>       
@@ -30,6 +29,7 @@ function Logo(props) {
             <Col xs={3} sm={3} md={2} lg={6} xl={6} className={styles.productCategory}>{props.productCategory}</Col>
             </div>
             <Col xs={12} className={styles.dividerOtherPages}></Col>
+            <Col className={styles.undertitle}>{props.undertitle}</Col>
         </Row>
         </Col>
  
