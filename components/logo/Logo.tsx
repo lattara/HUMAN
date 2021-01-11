@@ -23,15 +23,16 @@ function Logo(props) {
             </Row>       
  
     const renderOtherPage = 
-    <Col>
+        <Col className = {styles.otherPages}>
         <Row noGutters className={styles.logoOtherPages}>
-            <Col xs={9} sm={9} md={10} lg={10} xl={10}>HUMAN</Col> 
+            <Col xs={9} sm={9} md={10} lg={6} xl={6}>HUMAN</Col> 
             <div>
-            <Col xs={3} sm={3} md={2} lg={2} xl={2} className={styles.productCategory}>{props.productCategory}</Col>
+            <Col xs={3} sm={3} md={2} lg={6} xl={6} className={styles.productCategory}>{props.productCategory}</Col>
             </div>
             <Col xs={12} className={styles.dividerOtherPages}></Col>
         </Row>
-    </Col>
+        </Col>
+ 
 
 
     return (

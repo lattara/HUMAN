@@ -36,6 +36,7 @@
     line-height: 0.9;
     text-align: right;
     top:60px;
+    width: 100%;
 }
 
 .productCategory {
@@ -52,11 +53,10 @@
     
 }
 
-
-@media (min-width: 768px) { 
+@media (min-width: 992px) { 
 
     // main page
-
+    
     .logoMain {
         font-size: 10em;
         height: 135px;
@@ -67,21 +67,39 @@
     }
     
     .secondTitleMain {
-        margin: 5px 25px 10px 0px;
-    }
-
-    .secondTitleMain {
         font-family: $font-secondary;
         font-size: 0.2em;
         padding-right: 40px;
-    }
-    
-    .logo {
-        font-size: 150px;
+        margin: 10px 0px 0px 0px;
     }
 
+    // other pages
 
+    .otherPages {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
 
+    .logoOtherPages {
+        height: 35vh;
+        display: flex;
+        align-content: flex-end;
+        width: 60%;
+        justify-content: right;
+    }
 
+    .dividerOtherPages {
+        width: 300px;
+    }
 
+    .logoOtherPages:first-child {
+        font-size: calc(7vw + 1vh);
+        align-items: baseline;
+    }
+
+    .productCategory {
+        font-size: 0.4em ;
+    }
+ 
  }
