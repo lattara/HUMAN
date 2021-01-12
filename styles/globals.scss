@@ -66,27 +66,17 @@ p {
   font-size: 10px;
 }
 
+.slick-slider {
+  padding-top: 80px;
+}
+
 @media (min-width: 768px) { 
 
   /* CAROUSEL STYLES DESKTOP */
 
-  .slick-slide img {
-    max-width: 95%;
-}
 
-  .slick-slide {
-    width: fit-content !important;
-    padding: 0px;
-  }
 
-  .slick-slide>div:first-of-type {
-    padding: 0px ;
-  }
-
-  .slick-slider {
-    width: 75% !important;
-  }
-
+ 
   
 
 }

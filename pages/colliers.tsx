@@ -15,7 +15,7 @@ function colliers() {
           src="/necklace-presentation-photo.png"
           alt="Necklace presentation photo"
            /> 
-      {/* <Product /> */}
+      <Product /> 
     </>
   )
 }

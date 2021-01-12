@@ -1,0 +1,30 @@
+.row {
+    border: 1px solid red;
+} 
+
+.productContainer {
+    padding-top: 70px;
+}
+
+.presentationImage  {
+    display: none;
+    
+}
+
+@media (min-width: 922px) { 
+
+    .presentationImage  {
+        position: absolute;
+        top:2%;
+        left: 15%;
+        display: block;
+        width: calc(25vw + 1vh);   
+    }
+
+    .productContainer {
+        padding-top: 100px;
+    }
+
+
+}
+
