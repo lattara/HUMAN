@@ -1,5 +1,9 @@
 @import "../../styles/custom.pallette.scss";
 
+.productsContainer {
+    padding: 0px;
+}
+
 .card {
     //border: 1px solid red;
     display: flex;
@@ -43,12 +47,10 @@
 
 @media (min-width: 922px) { 
 
-    .container {
-        height: fit-content;
-        position: absolute;
-        top:unset;
-        bottom: 50px;
+    .ProductsContainer {
+        justify-self: end;
     }
+
 
     .card {
         max-width: 250px;  
@@ -58,8 +60,7 @@
         display: none;
     }
 
-    .card{
-        width: fit-content;
-    }
+
+
     
 }

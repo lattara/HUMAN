@@ -19,14 +19,14 @@ function Product() {
             {
                 breakpoint: 1800,
                 settings: {
-                    slidesToShow: Math.min(productsMock.length, 4),
+                    slidesToShow: Math.min(productsMock.length, 6),
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: Math.min(productsMock.length, 5),
+                    slidesToShow: Math.min(productsMock.length,2),
                     slidesToScroll: 1,
                     rows: 1,
                 }
@@ -52,10 +52,11 @@ function Product() {
     };
 
     return (
+        <Col  xs={12} sm={12} md={12} lg={{span: 10, offset:1}} xl={{span: 10, offset:1}} className = {styles.productsContainer}>
         <Slider {...carouselSettings} >
             {
                 productsMock.map(product =>
-                        <Row className={styles.card}>
+                        <Row noGutters className={styles.card}>
                             <Col className={styles.image}><img key={product.id} src={product.image} /></Col>
                             <Col className={styles.name}>{product.name}</Col>
                             <Col className={styles.description}>{product.description}</Col>
@@ -66,7 +67,7 @@ function Product() {
                 )
             }
         </Slider>
-       
+        </Col>
     )
 }
 

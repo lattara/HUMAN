@@ -20,6 +20,8 @@ body,
 
 .container-fluid {
   padding: 0px;
+  height: 100vh;
+  width: 100wv;
 }
 
 .row {
@@ -50,10 +52,16 @@ p {
     opacity: 0.5;
 }
 
+.slick-slide {
+  padding: 0px;
+  max-width: 260px;
+  
+}
+
 .slick-slide>div:first-of-type {
   display: flex;
   flex-direction: column;
-  padding: 0px 20px 20px 20px;
+  //padding: 0px 20px 20px 20px;
   justify-content: center;
 }
 
@@ -73,6 +81,7 @@ p {
 @media (min-width: 768px) { 
 
   /* CAROUSEL STYLES DESKTOP */
+
 
 
 

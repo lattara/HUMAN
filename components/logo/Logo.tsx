@@ -22,11 +22,11 @@ function Logo(props) {
             </Row>       
  
     const renderOtherPage = 
-        <Col className = {styles.otherPages}>
+        <Col xs={12} sm={12} md={12} lg={12} xl={12} className = {styles.otherPages}>
         <Row noGutters className={styles.logoOtherPages}>
-            <Col xs={9} sm={9} md={10} lg={4} xl={4}>HUMAN</Col> 
+            <Col xs={9} sm={9} md={10} lg={4} xl={'auto'}>HUMAN</Col> 
             <div>
-            <Col xs={3} sm={3} md={2} lg={6} xl={6} className={styles.productCategory}>{props.productCategory}</Col>
+            <Col xs={3} sm={3} md={2} lg={6} xl={'auto'} className={styles.productCategory}>{props.productCategory}</Col>
             </div>
             <Col xs={12} className={styles.dividerOtherPages}></Col>
             <Col className={styles.undertitle}>{props.undertitle}</Col>

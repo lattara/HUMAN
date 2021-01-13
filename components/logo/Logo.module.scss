@@ -37,6 +37,7 @@
     text-align: right;
     top:60px;
     width: 100%;
+    padding: 0px;
 }
 
 .productCategory {
@@ -84,15 +85,16 @@
         display: flex;
         width: 100%;
         justify-content: flex-end;
+        height: 50vh;
     }
 
     .logoOtherPages {
-        height: 35vh;
+        height: 30vh;
         display: flex;
         align-content: flex-end;
         text-align: left;
         width: fit-content;
-        width: 60%;
+        width: 70%;
         justify-content: right;
     }
 
@@ -107,7 +109,6 @@
 
     .productCategory {
         font-size: 0.4em;
-        margin-left: 35px;
     }
 
     .undertitle {
