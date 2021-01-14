@@ -85,21 +85,24 @@
         display: flex;
         width: 100%;
         justify-content: flex-end;
-        height: 50vh;
+        height: fit-content;
+        padding: 0px;
+        justify-content: flex-start;
     }
 
     .logoOtherPages {
-        height: 30vh;
         display: flex;
-        align-content: flex-end;
         text-align: left;
         width: fit-content;
-        width: 70%;
-        justify-content: right;
     }
 
-    .dividerOtherPages {
-        width: 300px;
+    .mainLogo, .productCategory {
+        display: inline-block;
+     }
+
+    .presentationImage {
+        min-width: fit-content;
+        float: left;
     }
 
     .logoOtherPages:first-child {

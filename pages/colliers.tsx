@@ -11,10 +11,7 @@ function colliers() {
   return (
         <>
       <Logo productCategory={'collier'} undertitle={shortDescription}/>
-      <img className={styles.presentationImage}
-          src="/necklace-presentation-photo.png"
-          alt="Necklace presentation photo"
-           /> 
+     
       <Product /> 
     </>
   )
