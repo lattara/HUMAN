@@ -19,6 +19,10 @@
     border-top: 5px solid $black;
 }
 
+.presentationImage {
+    display: none;
+}
+
 .secondTitleMain {
     font-family: $font-secondary;
     font-size: 12px;
@@ -40,6 +44,10 @@
     padding: 0px;
 }
 
+    .otherPages {
+    padding:0px ;
+}
+
 .productCategory {
     padding: 0px;
     font-size: 15px;
@@ -48,10 +56,13 @@
     text-align: right;
 }
 
+.mainLogo, .productCategory {
+    display: inline-block;
+ }
+
 .dividerOtherPages {
     border-top: 5px solid $black;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .undertitle {
@@ -59,7 +70,7 @@
 }
 
 
-@media (min-width: 992px) { 
+@media (min-width: 1200px) { 
 
     // main page
     
@@ -96,11 +107,8 @@
         width: fit-content;
     }
 
-    .mainLogo, .productCategory {
-        display: inline-block;
-     }
-
     .presentationImage {
+        display: block;
         min-width: fit-content;
         float: left;
     }
