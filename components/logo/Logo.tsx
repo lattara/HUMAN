@@ -28,7 +28,7 @@ function Logo(props) {
                 
                 <Col xs={0} sm={0} md={3} lg={3} xl={2} className={styles.presentationImage}>
                     <img
-                        src="/necklace-presentation-photo.png"
+                        src={props.imageLink}
                         alt="Necklace presentation photo" />
                 </Col>
                 
