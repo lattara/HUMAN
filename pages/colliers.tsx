@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../components/logo/Logo'
 import styles from '../styles/Colliers.module.scss'
-import Product from '../components/product/Product'
+import Products from '../components/product/Products'
 import Image from 'next/image'
 import { Col } from 'react-bootstrap';
 
@@ -11,7 +11,7 @@ function colliers() {
   return (
       <>
         <Logo productCategory={'collier'} imageLink={"/necklace-presentation-photo.png"} undertitle={shortDescription}/>
-        <Product /> 
+        <Products /> 
     </>
   )
 }

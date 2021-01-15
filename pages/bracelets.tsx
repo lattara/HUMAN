@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../components/logo/Logo'
-import Product from '../components/product/Product'
+import Products from '../components/product/Products'
 import styles from '../styles/Bracelet.module.scss'
 
 function bracelets() {
@@ -9,7 +9,7 @@ function bracelets() {
     return (
         <>
         <Logo productCategory={'collier'} imageLink={"/necklace-presentation-photo.png"} undertitle={shortDescription}/>
-        <Product /> 
+        <Products /> 
       </>
         
     )

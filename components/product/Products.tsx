@@ -5,7 +5,7 @@ import styles from './Products.module.scss'
 import { Row, Col } from 'react-bootstrap';
 
 
-function Product() {
+function Products() {
     const carouselSettings = {
         dots: true,
         autoplay: false,
@@ -57,7 +57,12 @@ function Product() {
             {
                 productsMock.map(product =>
                         <Row noGutters className={styles.card}>
-                            <Col className={styles.image}><img key={product.id} src={product.image} /></Col>
+                            <Col className={styles.image}><img key={product.id} src={product.image} />
+                                <div className={styles.overlay}>
+                                     <button>Details</button>
+                                    <button>I want it</button>
+                                </div>
+                            </Col>
                             <Col className={styles.name}>{product.name}</Col>
                             <Col className={styles.description}>{product.description}</Col>
                             <Col className={styles.price}>{product.price},00€</Col>
@@ -71,4 +76,4 @@ function Product() {
     )
 }
 
-export default Product
+export default Products
