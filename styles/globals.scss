@@ -82,6 +82,10 @@ p {
 
   /* CAROUSEL STYLES DESKTOP */
   
+  .slick-slide[aria-hidden="true"] {
+    opacity: unset;
+}
+
  
 }
 

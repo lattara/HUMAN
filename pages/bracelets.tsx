@@ -8,7 +8,7 @@ function bracelets() {
 
     return (
         <>
-        <Logo productCategory={'collier'} imageLink={"/necklace-presentation-photo.png"} undertitle={shortDescription}/>
+        <Logo productCategory={'bracelet'} imageLink={"/necklace-presentation-photo.png"} undertitle={shortDescription}/>
         <Products /> 
       </>
         

@@ -7,7 +7,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 37,
-        image: 'https://picsum.photos/id/25/250/300'},
+        image: 'https://picsum.photos/id/122/250/300'},
     {
         id:2,
         name: 'Product 2',
@@ -16,7 +16,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 32,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     },
     {
@@ -27,7 +27,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 32,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     },
     {
@@ -38,7 +38,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 26,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     },
     {
@@ -49,7 +49,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 36,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     },
     {
@@ -60,7 +60,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 36,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     },
 
@@ -72,7 +72,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 36,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     },
 
@@ -84,7 +84,7 @@ export const productsMock = [
         category: 'necklace',
         tags: ['tag1','tag2', 'tag3'],
         price: 36,
-        image: 'https://picsum.photos/id/25/250/300',
+        image: 'https://picsum.photos/id/122/250/300',
         
     }
 

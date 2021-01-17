@@ -1,0 +1,54 @@
+@import "/styles/custom.pallette.scss";
+
+.active {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    box-shadow: 0px 0px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #fdd702 5%, #fab546 100%);
+	background-color:#fdd702;
+	border:1px solid #f5bc67;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 7px;
+	cursor:pointer;
+	color:black;
+    font-size:12px;
+	font-family: $font-secondary;
+	margin: 10px;
+}
+
+.disabled {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    box-shadow: 0px 0px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #fdd702 5%, #fab546 100%);
+	background-color:#fdd702;
+	border:1px solid #f5bc67;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 7px;
+	cursor:pointer;
+	color:black;
+    font-size:12px;
+	font-family: $font-secondary;
+	margin: 10px;
+}
+
+.active:hover, .disabled:hover {
+	background:linear-gradient(to bottom, #fab546 5%, #fdd702 100%);
+	background-color:#fab546;
+}
+
+.active:active .disabled:hover{
+	position:relative;
+	top:1px;
+}
+
+.buttonImage {
+	width: 20px !important;
+	margin-right: 5px;	
+}
