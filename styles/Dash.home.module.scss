@@ -1,0 +1,74 @@
+@import "custom.pallette.scss";
+
+
+.dashboardBackground {
+    background-color: $white;
+    height: 90%;
+    width: 100%;
+    justify-content: center;
+    overflow: scroll;
+    overflow-y: scroll;
+  }
+
+.columnBlock {
+    box-shadow: $block-box-shadow;
+    border-radius: 12px;
+    margin: 30px 0px 20px 0px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.columnBlock:hover {
+    box-shadow: $block-box-shadow-hover;
+}
+
+.columnBlock:hover .label {
+    color: $secondary-orange;
+}
+
+.columnBlock:hover .tooltip {
+    font-size: 14px;
+}
+
+.blockContent {
+    width: 100%;
+    
+}
+
+.blockContent div:nth-of-type(2){
+    height: fit-content;
+    /* justify-self: center; */
+    align-self: center;
+    padding: 0px 0px 0px 10px;
+}
+
+
+.iconContainer {
+    display: flex;
+    border-right: 1px solid $primary-dashboard;
+    height:90%;
+    align-self: center;
+    justify-content: center;
+}
+
+.icon {
+    max-width: 40px;
+    max-height: 40px;
+    align-self: center;
+}
+
+.label {
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-size:  17px;
+    color: $primary-dashboard;
+}
+
+
+.tooltip {
+    font-family: $font-secondary;
+    font-size: 12px;
+    color: $primary-dashboard;
+    overflow: visible;
+}

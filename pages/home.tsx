@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../components/logo/Logo'
 import styles from '../styles/Home.module.scss'
-import { Container, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 function home() {
     return (

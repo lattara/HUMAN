@@ -1,14 +1,14 @@
-import React from "react";
-import Nav from "../navigation/Nav";
+import React from 'react'
 import Container from "react-bootstrap/Container";
+import DashNav from '../dashboard/DashNav';
 
-function Layout(props) {
+function DashLayout(props) {
     return (
         <Container fluid>
-            <Nav/>
+            <DashNav/>
            {props.children}
         </Container>
     )
 }
 
-export default Layout
+export default DashLayout

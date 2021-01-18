@@ -20,24 +20,30 @@ export const navItems: navBarItem[] = [
     },
     {
         id: 3,
+        label: 'Dash',
+        link: '',
+        icon: 'door-key.png'
+    },
+    {
+        id: 4,
         label: 'Colliers',
         link: 'colliers',
         icon: "necklace.png"
     },
     {
-        id: 4,
+        id: 5,
         label: 'Bracelet',
         link: '',
         icon: 'bracelet.png'
     },
     {
-        id: 5,
+        id: 6,
         label: 'Matériaux',
         link: '',
         icon: 'stone.png'
     },
     {
-        id: 6,
+        id: 7,
         label: 'À propos',
         link: '',
         icon: 'feather.png'

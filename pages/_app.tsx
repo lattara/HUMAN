@@ -1,16 +1,35 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
+import { withRouter } from 'next/router'
 import '../styles/globals.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DashLayout from '../components/layout/DashLayout';
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+function MyApp({ Component, pageProps, router }) {
+  const loggedUser = { name: 'Name', role: 'admin' }
+
+  if (router.pathname.startsWith('/dashboard/') && loggedUser.role === 'admin') {
+    return (
+      <>
+
+        <DashLayout>
+          <Component {...pageProps} />
+        </DashLayout>
+
+      </>
+    )
+  }
+  else {
+    return (
+      <>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </>
+    )
+  }
 
 }
 
-export default MyApp
+export default withRouter(MyApp)
