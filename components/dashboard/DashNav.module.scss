@@ -27,13 +27,15 @@
     cursor: pointer;
 }
 
-
+.exitContainer {
+    display: flex;
+    justify-content: flex-end;
+}
 
 .exit {
     max-width: 25px;
     max-height: 25px;
     margin:10px;
-    float: right;
 }
 
 

@@ -39,17 +39,20 @@ function dashNav() {
         // MOBILE
         return (
             <>
+                <Row className={styles.exitContainer}>
+                    <img
+                        className={styles.exit} src="/log-out.png" alt="exit"
+                        onMouseOver={e => (e.currentTarget.src = "/log-out-red.png")}
+                        onMouseLeave={e => (e.currentTarget.src = "/log-out.png")}
+                    />
+                </Row>
+
                 <Row className={styles.mobileContainer}>
                     {dashNavItem.map(navItem => <Col className={styles.mobileItemContainer} key={navItem.id}><Link href={navItem.link}><img src={navItem.icon} /></Link></Col>)}
                 </Row>
-                
-                <img
-                    onClick={toggleDrawer(true)}
-                    className={styles.exit} src="/log-out.png" alt="exit"
-                    onMouseOver={e => (e.currentTarget.src = "/log-out-red.png")}
-                    onMouseLeave={e => (e.currentTarget.src = "/log-out.png")}
-                />
-               
+
+
+
             </>
         )
     } else {
@@ -62,18 +65,18 @@ function dashNav() {
                     </Row>
                 </SwipeableDrawer>
                 <Col className={styles.actionButtons}>
-                <img
-                    onClick={toggleDrawer(true)}
-                    className={styles.exit} src="/dashboard-menu.png" alt="exit"
-                    onMouseOver={e => (e.currentTarget.src = "/dashboard-menu-red.png")}
-                    onMouseLeave={e => (e.currentTarget.src = "/dashboard-menu.png")}
-                />
+                    <img
+                        onClick={toggleDrawer(true)}
+                        className={styles.exit} src="/dashboard-menu.png" alt="exit"
+                        onMouseOver={e => (e.currentTarget.src = "/dashboard-menu-red.png")}
+                        onMouseLeave={e => (e.currentTarget.src = "/dashboard-menu.png")}
+                    />
 
-                <img
-                    className={styles.exit} src="/log-out.png" alt="exit"
-                    onMouseOver={e => (e.currentTarget.src = "/log-out-red.png")}
-                    onMouseLeave={e => (e.currentTarget.src = "/log-out.png")}
-                />
+                    <img
+                        className={styles.exit} src="/log-out.png" alt="exit"
+                        onMouseOver={e => (e.currentTarget.src = "/log-out-red.png")}
+                        onMouseLeave={e => (e.currentTarget.src = "/log-out.png")}
+                    />
                 </Col>
             </>
         )
