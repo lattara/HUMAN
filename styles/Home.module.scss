@@ -37,6 +37,13 @@
     border-color: $black;
 }
 
+.insta, .etsy {
+    position: absolute;
+    max-width: 35px;
+    max-height: 35px;
+    padding: 5px 0px 11px 15px;
+}
+
 
 // -------------------------------
 
@@ -68,6 +75,20 @@
         height: 50%;
         border-top: 10px solid;
         border-color: $black;
+    }
+
+    .insta {
+        position: absolute;
+        right:0px;
+        top: 55%;
+        padding: 15px;
+    }
+
+    .etsy {
+        position: absolute;
+        right:30px;
+        top: 53.5%;
+        padding: 30px;
     }
     
 }
