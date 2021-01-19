@@ -5,8 +5,29 @@ import dashNavItems from '../../components/dashboard/dashNavItems.list'
 import Link from 'next/link';
 
 function dashboard() {
+
+  let today = new Date()
+  let hours = today.getHours()
+
+  let getCustomGreetMessage=()=>{
+    if (today.getMonth()=== 0 && today.getDate()===20 ){ // personal message for Char birthday
+      return "Joyeux anniversaire ƪ(ړײ)‎ƪ​​"
+    }
+    if (hours < 18){
+      return "Bonsoir chouette de nuit 	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧"
+    } 
+    if (hours > 18){
+      return "Bonjour Charlotte -`ღ´-"
+    }
+  }
+
+  console.log(today.getMonth()=== 0 && today.getDate()===19)
   return (
     <Row className={styles.dashboardBackground}>
+      <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+        <h2>{getCustomGreetMessage()}</h2>
+        <span>Sélectionnez une case pour commencer à modifier ton site Web</span>
+        </Col>
       {
         dashNavItems.filter(item => item.id !== 1).map(
           item =>
