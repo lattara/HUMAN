@@ -8,20 +8,33 @@ const HumanButton = (props) => {
     
     type props = {
         state: buttonState,
-        status: "active" | "disabled",
+        status: "active" | "disabled" | "warning"
         text: '',
         callback: Event ,
-        icon: String
+        icon: String,
+        onClick: Function,
     }
         switch (props.state) {
             case 'full':
               return <button 
+                    onClick={props.onClick}
                     className={props.status === "active" ? styles.active : styles.disabled}>
                     <img className={styles.buttonImage} src={props.buttonImage}/>
                     {props.text}
                 </button>
             case 'outline':
-                return <div>outline</div>
+                return <button 
+                onClick={props.onClick}
+                className={props.status === "active" ? styles.active : styles.disabled}>
+                <img className={styles.buttonImage} src={props.buttonImage}/>
+                {props.text}
+            </button>
+            case 'warning':
+                return <button onClick={props.onClick}
+                className={styles.warning}>
+                <img className={styles.buttonImage} src={props.buttonImage}/>
+                </button>
+                {props.text}
             default:
               return null;
           }
