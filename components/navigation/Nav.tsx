@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Nav.module.scss'
 import navItems from './NavItems.list'
+import Link from 'next/link'
 
 function Nav() {   
     const loggedUser = {name: 'Name', role: 'admin'} 
@@ -11,12 +12,12 @@ function Nav() {
         <>
             <ul className={`${styles.topNav}`}>
                {
-               topNav.map(navItem => <li key = {navItem.id} className={styles.navIcon}><img src={navItem.icon} /></li>
+               topNav.map(navItem => <li key={navItem.id} className={styles.navIcon}><Link href={navItem.link}><img src={navItem.icon} /></Link></li>
                )} 
             </ul>
             <ul className={`${styles.bottomNav}`}>
                {
-               bottomNav.map(navItem => <li key = {navItem.id} className={styles.navIcon}><img src={navItem.icon} /><span>{navItem.label}</span></li>
+               bottomNav.map(navItem => <li key={navItem.id} className={styles.navIcon}><Link href={navItem.link}><img src={navItem.icon}/></Link><span>{navItem.label}</span></li>
                )} 
             </ul>
         </>

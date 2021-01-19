@@ -4,6 +4,7 @@ import { SwipeableDrawer } from '@material-ui/core';
 import { Row, Col } from 'react-bootstrap';
 import HumanButton from '../button/Button'
 import styles from "./DashNav.module.scss"
+import Link from 'next/link';
 
 function dashNav() {
 
@@ -39,14 +40,16 @@ function dashNav() {
         return (
             <>
                 <Row className={styles.mobileContainer}>
-                    {dashNavItem.map(navItem => <Col className={styles.mobileItemContainer} key={navItem.id}><img src={navItem.icon} /></Col>)}
+                    {dashNavItem.map(navItem => <Col className={styles.mobileItemContainer} key={navItem.id}><Link href={navItem.link}><img src={navItem.icon} /></Link></Col>)}
                 </Row>
+                
                 <img
                     onClick={toggleDrawer(true)}
                     className={styles.exit} src="/log-out.png" alt="exit"
                     onMouseOver={e => (e.currentTarget.src = "/log-out-red.png")}
                     onMouseLeave={e => (e.currentTarget.src = "/log-out.png")}
                 />
+               
             </>
         )
     } else {

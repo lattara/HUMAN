@@ -9,43 +9,43 @@ export const navItems: navBarItem[] = [
     {
         id: 1,
         label: 'Connexion',
-        link: '',
+        link: '/login',
         icon: 'alien.png'
     },
     {
         id: 2,
         label: 'Panier',
-        link: '',
+        link: '/cart',
         icon: 'shopping.png'
     },
     {
         id: 3,
         label: 'Dash',
-        link: '',
+        link: '/dashboard/home',
         icon: 'door-key.png'
     },
     {
         id: 4,
         label: 'Colliers',
-        link: 'colliers',
+        link: '/colliers',
         icon: "necklace.png"
     },
     {
         id: 5,
         label: 'Bracelet',
-        link: '',
+        link: '/bracelets',
         icon: 'bracelet.png'
     },
     {
         id: 6,
         label: 'Matériaux',
-        link: '',
+        link: '/materials',
         icon: 'stone.png'
     },
     {
         id: 7,
         label: 'À propos',
-        link: '',
+        link: '/about',
         icon: 'feather.png'
     },
     

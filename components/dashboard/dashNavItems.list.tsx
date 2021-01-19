@@ -11,7 +11,7 @@ export const dashNavItem: DashNavItem[] = [
     {
         id: 1,
         label: 'Home',
-        link: '',
+        link: '/dashboard/home',
         tooltip: 'Tableau de bord principal',
         icon: '/yellow-home.png'
     },
@@ -19,7 +19,7 @@ export const dashNavItem: DashNavItem[] = [
     {
         id: 2,
         label: 'Utilisateurs',
-        link: '',
+        link: '/dashboard/users',
         tooltip: 'Gérer les utilisateurs',
         icon: '/yellow-users.png'
     },
@@ -27,21 +27,21 @@ export const dashNavItem: DashNavItem[] = [
         id: 3,
         label: 'Commandes',
         tooltip: 'Gérer les commandes',
-        link: '',
+        link: '/dashboard/orders',
         icon: '/yellow-orders.png'
     },
     {
         id: 4,
         label: 'Produits',
         tooltip: 'Gérer les produits',
-        link: '',
+        link: '/dashboard/products',
         icon: '/yellow-product.png'
     },
     {
         id: 5,
         label: 'Divers',
         tooltip: 'Gérer les textes et divers',
-        link: '',
+        link: '/dashboard/divers',
         icon: "/yellow-text.png"
     } 
 ]

@@ -8,8 +8,6 @@
     align-content: center;
 }
 
-
-
 .mobileContainer {
     position: absolute;
     bottom: 0px;
@@ -26,6 +24,7 @@
 
 .mobileItemContainer img {
     max-width: 30px;
+    cursor: pointer;
 }
 
 
