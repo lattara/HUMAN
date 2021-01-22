@@ -1,9 +1,11 @@
 import React from 'react'
+import Table from '../../components/table/HumanTable'
+import {dataMOCK} from "../../components/table/data.MOCK"
 
 function products() {
     return (
         <div>
-            products page
+            <Table data={dataMOCK} />
         </div>
     )
 }
