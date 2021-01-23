@@ -26,7 +26,7 @@ function dashboard() {
     <Row className={styles.dashboardBackground}>
       <Col xs={12} sm={12} md={12} lg={12} xl={12}>
         <h2>{getCustomGreetMessage()}</h2>
-        <span>Sélectionnez une case pour commencer à modifier ton site Web</span>
+        <dd>Sélectionnez une case pour commencer à modifier ton site Web</dd>
         </Col>
       {
         dashNavItems.filter(item => item.id !== 1).map(

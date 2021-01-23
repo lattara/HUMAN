@@ -48,7 +48,7 @@ function dashNav() {
                 </Row>
 
                 <Row className={styles.mobileContainer}>
-                    {dashNavItem.map(navItem => <Col className={styles.mobileItemContainer} key={navItem.id}><Link href={navItem.link}><img src={navItem.icon} /></Link></Col>)}
+                    {dashNavItem.map(navItem => <Col className={styles.mobileItemContainer} key={navItem.id}><Link href={navItem.link}><img src={navItem.icon} className={styles.icon} /></Link></Col>)}
                 </Row>
 
 
@@ -61,7 +61,7 @@ function dashNav() {
             <>
                 <SwipeableDrawer open={state.open} onOpen={toggleDrawer(true)} onClose={toggleDrawer(false)}>
                     <Row noGutters className={styles.desktopContainer}>
-                        {dashNavItem.map(navItem => <Col className={styles.desktopItemContainer} key={navItem.id}><img src={navItem.icon} /><span>{navItem.label}</span></Col>)}
+                        {dashNavItem.map(navItem => <Col className={styles.desktopItemContainer} key={navItem.id}><Link href={navItem.link}><img src={navItem.icon} className={styles.icon} /></Link><span>{navItem.label}</span></Col>)}
                     </Row>
                 </SwipeableDrawer>
                 <Col className={styles.actionButtons}>

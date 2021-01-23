@@ -39,8 +39,16 @@ h1 {
   color: $black;
 }
 
+h2{
+  padding: 20px;
+}
+
 p {
   margin: 0px;
+}
+
+dd {
+  padding: 20px;
 }
 
 .cursor {
@@ -86,11 +94,15 @@ p {
     opacity: unset;
 }
 
-// styles for material UI 
+// styles for material UI table
 
 .MuiDrawer-paper {
   background-color: $primary-dashboard !important; // :( every time you use !important angel looses it's wings 
   width: 10%;
+}
+
+.MuiTableCell-head {
+  font-weight: bolder !important; //NOOOOOOOOOOOOOO
 }
 
  
