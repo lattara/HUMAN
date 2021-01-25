@@ -17,6 +17,31 @@
     font-size:12px;
 	font-family: $font-secondary;
 	margin: 10px;
+	max-width: 200px;
+}
+
+.outline {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    box-shadow: 0px 0px 0px 0px #fff6af;
+	background:transparent;
+	background-color:#fdd702;
+	border:1px solid $black;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 7px;
+	cursor:pointer;
+	color:black;
+    font-size:12px;
+	font-family: $font-secondary;
+	margin: 20px 0px 0px 0px;
+	max-width: 200px;
+}
+
+.outline:hover {
+	font-size: 15px;
 }
 
 .disabled {

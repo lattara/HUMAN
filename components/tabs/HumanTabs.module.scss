@@ -1,0 +1,33 @@
+@import "/styles/custom.pallette.scss";
+
+
+.tabsContainer {
+    padding: 50px 0px 0px 0px;
+}
+
+.tab {
+   overflow: scroll;
+   max-height: 75vh;
+}
+
+.image {
+   width: 60%;
+   padding: 20px;
+   
+}
+
+.aboutText {
+    padding: 20px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.name{
+    padding:0px 0px 0px 20px;
+}
+
+
+@media (min-width: 768px) {
+
+
+}

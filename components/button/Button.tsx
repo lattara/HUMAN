@@ -16,21 +16,21 @@ const HumanButton = (props) => {
     }
         switch (props.state) {
             case 'full':
-              return <button 
+              return <button type="submit"
                     onClick={props.onClick}
                     className={props.status === "active" ? styles.active : styles.disabled}>
                     <img className={styles.buttonImage} src={props.buttonImage}/>
                     {props.text}
                 </button>
             case 'outline':
-                return <button 
+                return <button type="submit"
                 onClick={props.onClick}
-                className={props.status === "active" ? styles.active : styles.disabled}>
+                className={props.status === "active" ? styles.active : styles.outline}>
                 <img className={styles.buttonImage} src={props.buttonImage}/>
                 {props.text}
             </button>
             case 'warning':
-                return <button onClick={props.onClick}
+                return <button type="submit" onClick={props.onClick}
                 className={styles.warning}>
                 <img className={styles.buttonImage} src={props.buttonImage}/>
                 </button>

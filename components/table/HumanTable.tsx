@@ -8,21 +8,13 @@ import { Col, Row } from 'react-bootstrap';
 
 
 function HumanTable(data) {
-    // const tableHeaders = Object.keys(data.data[0])
     const [headers, setHeaders] = useState([])
     const [rows, setRows] = useState([])
-    const [columns, setColumns] = useState([])
-    const [open, setOpen] = React.useState(false);
 
     useEffect(() => {
         setHeaders(Object.keys(data.data[0]))
         setRows(data.data.map(row => row))
-        setColumns(rows.map(cell => Object.values(cell)))
     }, [])
-
-
-    console.log(columns)
-
 
     return (
         <TableContainer component={Paper} >

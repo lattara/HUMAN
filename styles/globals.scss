@@ -43,6 +43,35 @@ h2{
   padding: 20px;
 }
 
+h3 {
+  font-family: $font-primary;
+}
+
+a {
+  color: $black;
+  font-family: $font-primary;
+}
+span {
+  font-family: $font-secondary;
+}
+
+label, ::placeholder {
+  margin:10px 0px 0px 0px;
+  font-family: $font-secondary;
+}
+input, textarea {
+  border-radius: 5px;
+  border: 1px solid $yellow-borders;
+  min-height: 35px;
+}
+
+::placeholder {
+  font-size: 12px;
+  padding: 5px;
+}
+
+
+
 p {
   margin: 0px;
 }
@@ -86,6 +115,23 @@ dd {
   padding-top: 80px;
 }
 
+// bootstrap tab styles
+
+.nav-link.active {
+  border-bottom: 5px solid $primary-yellow;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border:none;
+  background: none;
+  border-bottom: 2px solid $yellow-borders;
+}
+
+
 @media (min-width: 768px) { 
 
   /* CAROUSEL STYLES DESKTOP */
@@ -105,7 +151,6 @@ dd {
   font-weight: bolder !important; //NOOOOOOOOOOOOOO
 }
 
- 
 }
 
 
