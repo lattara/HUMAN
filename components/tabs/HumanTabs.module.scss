@@ -27,7 +27,10 @@
 }
 
 
-@media (min-width: 768px) {
-
+@media (min-width: 922px) {
+    .image {
+        padding: 0px;
+        max-width: 400px;
+    }
 
 }

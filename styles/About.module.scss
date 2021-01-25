@@ -4,5 +4,12 @@
     height: 100vh;
     z-index: -2;
     background: linear-gradient(110deg, #fdd802 60%, #ffed4b 60%);
+
 }
 
+@media (min-width: 922px) { 
+    .aboutContainer {
+        padding-left: 120px;
+        background: none;
+    }
+}
