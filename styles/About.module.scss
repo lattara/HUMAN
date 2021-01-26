@@ -2,14 +2,49 @@
 
 .aboutContainer {
     height: 100vh;
-    z-index: -2;
     background: linear-gradient(110deg, #fdd802 60%, #ffed4b 60%);
-
 }
 
 @media (min-width: 922px) { 
+
+    .image {
+        max-width: 500px;
+    }
+    .aboutText {
+        max-width: 450px;
+        text-align: justify;
+    }
+
+    .bioContainer {
+        background: url("/brown-texture.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 800px;
+    }
     .aboutContainer {
         padding-left: 120px;
         background: none;
+        display: flex;
     }
+
+    .contactContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .title { 
+        margin: 120px 0px 0px -150px;
+    }
+
+    .title h3 {
+        font-size: 3em;
+    }
+
+    .name{
+        margin-top: 10px;
+    }
+
 }

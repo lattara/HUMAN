@@ -45,8 +45,7 @@ function ContactForm() {
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit}>
 
             <form className={styles.form} onSubmit={formik.handleSubmit} action="" >
-            <h3>Contactez moi!</h3>
-            <span className={styles.formText}>Vous avez des questions? N'hésitez pas à remplir le formulaire</span>
+            <h4>Contactez moi!</h4>
                 <label htmlFor="nom">Nom</label>
                 <Field 
                 id="name" 
@@ -58,7 +57,7 @@ function ContactForm() {
                 />
                 {formik.errors.name && formik.touched.name && formik.isValid===false ? <div className={styles.errorMsg}>{formik.errors.name}</div> : <div className={styles.errorMsg}></div>}
 
-                <label htmlFor="email">email</label>
+                <label htmlFor="email">Email</label>
                 <Field  
                 id="email" 
                 name="email" 
@@ -69,7 +68,7 @@ function ContactForm() {
                   />
                   {formik.errors.email && formik.touched.email && formik.isValid===false? <div  className={styles.errorMsg}>{formik.errors.email}</div> : <div className={styles.errorMsg}></div>}
                 <label htmlFor="message">Message</label>
-                <textarea 
+                <textarea className={styles.textarea} 
                 name="message" 
                 placeholder="Votre message ici..." 
                 id=""

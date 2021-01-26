@@ -1,15 +1,5 @@
 @import "/styles/custom.pallette.scss";
 
-.form {
-    display: flex;
-    flex-direction: column;
-    margin:20px;
-}
-
-.formText {
-    font-size: 12px;
-}
-
 .errorMsg{
     font-size: 12px;
     color: $secondary-red;
@@ -21,17 +11,18 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin:20px;
-    padding: 20px;
+    margin:10px;
+    width: 70%;
+    padding: 50px;
     box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
     border-radius: 5px;
     position: absolute;
     border: 1px solid $yellow-borders;
     background-color: $primary-yellow;
-  /*   z-index: 1; */
     animation: bounce 1.5s infinite;
   }
 
+  //submit button
   .form :last-child {
     align-self: center;
   }
@@ -44,4 +35,11 @@
       transform: translate(0, 8px);
     }
   } 
+
+  @media (min-width: 922px) { 
+  .textarea {
+    height:  100px;
+  }
+
+  }
   
