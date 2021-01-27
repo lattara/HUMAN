@@ -2,7 +2,7 @@
 
 
 .navIcon img {
-    width: 35px;
+    width: 30px;
     cursor: pointer;
   }
 
@@ -23,10 +23,16 @@
       bottom: 10px;
       justify-content: space-around;
       z-index: 2;
+      padding: 0px;
   }
+
 
 //hide label in mobile
 .navIcon  {
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+
     span {
         display: none;
     }
@@ -36,42 +42,41 @@
 
 @media (min-width: 922px) {
 
+    .navIcon img {
+        width: 40px;
+      }
+
     .bottomNav{
         flex-direction: column;
-        width: 60px;
-        position: fixed;
-        left: 0px;
-        top: 50px;
         margin: auto;
+        height: 100%;
+        width: fit-content;
+        padding: 0px;
+        
     }
 
-    .bottomNav li {
+    .topNav {
+        flex-direction: row;
+        margin: auto;
+        width: 100%;
+        height: 80px;
+        padding: 0px;
+        justify-content: flex-end;
+    }
+
+    .topNavIcon {
+        max-width: 30px;
+    }
+
+    .navIcon {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        padding: unset;
+        justify-content: unset;
     }
 
-    .topNav li {
-        padding-right: 20px;
-    }
-
-    .topNav li:hover {
-        img {
-            width: 60px;
-        }
-    }
-
-    // show label in desktop
-    .navIcon:hover  {
-        span {
-            position: absolute;
-            left: 50px;
-            display: inline;
-            font-family: $font-secondary;
-            margin-left: 20px;
-            font-size: 12px;
-            cursor: pointer;
-        }
-    
+    .navIcon img:hover {
+        width: 55px;
     }
 
 }

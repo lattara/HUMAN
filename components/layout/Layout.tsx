@@ -1,11 +1,11 @@
 import React from "react";
-import Nav from "../navigation/Nav";
+import HumanNav from "../navigation/HumanNav";
 import Container from "react-bootstrap/Container";
 
 function Layout(props) {
     return (
         <Container fluid>
-            <Nav/>
+            <HumanNav/>
            {props.children}
         </Container>
     )

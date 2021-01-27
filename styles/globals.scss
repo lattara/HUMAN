@@ -151,6 +151,13 @@ dd {
   font-weight: bolder !important; //NOOOOOOOOOOOOOO
 }
 
+//tooltip
+
+.MuiTooltip-tooltip {
+  background: $primary-yellow-opacity !important;
+  color: $black !important;
+}
+
 }
 
 
