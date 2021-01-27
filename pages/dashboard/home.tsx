@@ -10,11 +10,11 @@ function dashboard() {
   let hours = today.getHours()
 
   let getCustomGreetMessage=()=>{
-    if (today.getMonth()=== 0 && today.getDate()===20 ){ // personal message for Char birthday
+    if (today.getMonth()=== 10 && today.getDate()===11 ){
       return "Joyeux anniversaire ƪ(ړײ)‎ƪ​​"
     }
     if (hours < 18){
-      return "Bonsoir chouette de nuit 	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧"
+      return "Bonsoir Charlotte	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧"
     } 
     if (hours > 18){
       return "Bonjour Charlotte -`ღ´-"
