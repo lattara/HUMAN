@@ -11,27 +11,27 @@ function dashboard() {
 
   let getCustomGreetMessage=()=>{
     if (today.getMonth()=== 10 && today.getDate()===11 ){
-      return "Joyeux anniversaire ƪ(ړײ)‎ƪ​​"
+      return <h2>Joyeux anniversaire <br /> ƪ(ړײ)‎ƪ​</h2>
     }
     if (hours < 18){
-      return " Bonjour Charlotte	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧"
+      return <h2>Bonjour Charlotte <br /> (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</h2>
     } 
     if (hours > 18){
-      return "Bonsoir Charlotte -`ღ´-"
+      return <h2>Bonsoir Charlotte <br /> -`ღ´-</h2>
     }
   }
 
   return (
     <Row className={styles.dashboardBackground}>
       <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-        <h2>{getCustomGreetMessage()}</h2>
+        {getCustomGreetMessage()}
         <dd>Sélectionnez une case pour commencer à modifier ton site Web</dd>
         </Col>
       {
         dashNavItems.filter(item => item.id !== 1).map(
           item =>
           <Link href={item.link}>
-            <Col xs={12} sm={12} md={4} lg={2} xl={4} className={styles.columnBlock}>
+            <Col xs={12} sm={12} md={4} lg={3} xl={4} className={styles.columnBlock}>
               <Row noGutters className={styles.blockContent}>
                 <Col xs={2} sm={2} md={2} lg={2} xl={2} className={styles.iconContainer}><img className={styles.icon} src={item.icon} /></Col>
                 <Col xs={6} sm={6} md={8} lg={8} xl={8} >
