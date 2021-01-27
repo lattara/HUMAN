@@ -68,13 +68,12 @@ function Products() {
                                         <Col className={styles.overlayDivider}></Col>
                                         <div className={styles.overlayButtons}>
                                             <HumanButton
-                                                state={"full"}
+                                                style={"full"}
                                                 text={"Je le veux!"}
-                                                status="active"
                                                 buttonImage="shopping.png"
                                             />
                                             <HumanButton
-                                                state={"full"}
+                                            style={"outline"}
                                                 text={"Plus de détails"}
                                                 status="disabled"
                                                 buttonImage="stone.png" />

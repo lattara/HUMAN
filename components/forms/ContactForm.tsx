@@ -77,10 +77,9 @@ function ContactForm() {
                 >
                 </textarea>
                 {formik.errors.message && formik.touched.message && formik.isValid===false ? <div className={styles.errorMsg} >{formik.errors.message}</div> : <div className={styles.errorMsg}></div>}
-                <HumanButton  state={"outline"}
+                <HumanButton  style={"outline"}
                               text={"Envoyer le message"}
-                              status="disabled"
-                              buttonImage="stone.png"
+                              buttonImage="send.png"
                                 />
             </form>
             </Formik>

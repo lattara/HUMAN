@@ -1,31 +1,11 @@
 @import "/styles/custom.pallette.scss";
 
-.active {
+.full {
     display: flex;
 	flex-direction: row;
 	justify-content: center;
     box-shadow: 0px 0px 0px 0px #fff6af;
 	background:linear-gradient(to bottom, #fdd702 5%, #fab546 100%);
-	background-color:#fdd702;
-	border:1px solid #f5bc67;
-	display:flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 7px;
-	cursor:pointer;
-	color:black;
-    font-size:12px;
-	font-family: $font-secondary;
-	margin: 10px;
-	max-width: 200px;
-}
-
-.outline {
-    display: flex;
-	flex-direction: row;
-	justify-content: center;
-    box-shadow: 0px 0px 0px 0px #fff6af;
-	background:transparent;
 	background-color:#fdd702;
 	border:1px solid $black;
 	display:flex;
@@ -36,22 +16,20 @@
 	color:black;
     font-size:12px;
 	font-family: $font-secondary;
-	margin: 20px 0px 0px 0px;
+	margin: 10px;
 	max-width: 200px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
 }
 
-.outline:hover {
-	font-size: 15px;
-}
-
-.disabled {
-    display: flex;
+.outline {
+	display: flex;
 	flex-direction: row;
 	justify-content: center;
     box-shadow: 0px 0px 0px 0px #fff6af;
-	background:linear-gradient(to bottom, #fdd702 5%, #fab546 100%);
-	background-color:#fdd702;
-	border:1px solid #f5bc67;
+	background:none;
+	background-color:none;
+	border:1px solid $black;
 	display:flex;
 	flex-direction: row;
 	justify-content: center;
@@ -61,6 +39,9 @@
     font-size:12px;
 	font-family: $font-secondary;
 	margin: 10px;
+	max-width: 200px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
 }
 
 .warning {
@@ -68,9 +49,9 @@
 	flex-direction: row;
 	justify-content: center;
     box-shadow: 0px 0px 0px 0px #fff6af;
-	background:linear-gradient(to bottom, #D62828 5%, #ff3030 100%);
+	background:linear-gradient(to bottom, rgb(214, 40, 40) 5%, hsl(0, 100%, 59%) 100%);
 	background-color:$secondary-red;
-	border:1px solid $secondary-blue;
+	border:1px solid $black;
 	display:flex;
 	flex-direction: row;
 	justify-content: center;
@@ -80,20 +61,22 @@
     font-size:12px;
 	font-family: $font-secondary;
 	margin: 10px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
 	
 }
 
-.active:hover, .disabled:hover {
+.full:hover{
 	background:linear-gradient(to bottom, #fab546 5%, #fdd702 100%);
 	background-color:#fab546;
 }
 
-.active:active .disabled:hover{
-	position:relative;
-	top:1px;
+.outline:hover {
+	border: 2px solid $black;
 }
+
 
 .buttonImage {
 	width: 20px !important;
-	margin-right: 5px;	
+	margin: 0px 0px 0px 10px;	
 }

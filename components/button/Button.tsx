@@ -4,37 +4,38 @@ import React from 'react'
 
 const HumanButton = (props) => {
 
-    type buttonState = 'full' | 'outline';
+    type style = "full" | "outline" | "warning";
     
     type props = {
-        state: buttonState,
-        status: "active" | "disabled" | "warning"
-        text: '',
-        callback: Event ,
+        style: style,
+        text: "",
+        callback: Event,
         icon: String,
         onClick: Function,
     }
-        switch (props.state) {
+        switch (props.style) {
             case 'full':
               return <button type="submit"
                     onClick={props.onClick}
-                    className={props.status === "active" ? styles.active : styles.disabled}>
-                    <img className={styles.buttonImage} src={props.buttonImage}/>
+                    className={styles.full}>
                     {props.text}
+                    <img className={styles.buttonImage} src={props.buttonImage}/>                   
                 </button>
             case 'outline':
                 return <button type="submit"
                 onClick={props.onClick}
-                className={props.status === "active" ? styles.active : styles.outline}>
-                <img className={styles.buttonImage} src={props.buttonImage}/>
+                className={styles.outline}>
                 {props.text}
+                <img className={styles.buttonImage} src={props.buttonImage}/>
             </button>
             case 'warning':
                 return <button type="submit" onClick={props.onClick}
                 className={styles.warning}>
-                <img className={styles.buttonImage} src={props.buttonImage}/>
-                </button>
                 {props.text}
+                <img className={styles.buttonImage} src={props.buttonImage}/>
+                
+                </button>
+                
             default:
               return null;
           }
