@@ -14,14 +14,13 @@ function dashboard() {
       return "Joyeux anniversaire ƪ(ړײ)‎ƪ​​"
     }
     if (hours < 18){
-      return "Bonsoir Charlotte	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧"
+      return " Bonjour Charlotte	(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧"
     } 
     if (hours > 18){
-      return "Bonjour Charlotte -`ღ´-"
+      return "Bonsoir Charlotte -`ღ´-"
     }
   }
 
-  console.log(today.getMonth()=== 0 && today.getDate()===19)
   return (
     <Row className={styles.dashboardBackground}>
       <Col xs={12} sm={12} md={12} lg={12} xl={12}>
