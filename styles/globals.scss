@@ -84,6 +84,11 @@ dd {
   display: none;
 }
 
+// logo typewriter 
+.Typewriter__wrapper {
+  font-family: $font-primary;
+}
+
   /* CAROUSEL STYLES */
   .slick-slide[aria-hidden="true"] {
     opacity: 0.5;
