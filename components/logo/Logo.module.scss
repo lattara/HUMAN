@@ -11,7 +11,7 @@
     text-align: right;
     line-height: 0.7;
     position: relative;
-    top: 20px;
+    top: 35px;
     width: 100vw;
     align-items: baseline;
 }
@@ -89,7 +89,15 @@
 	}
 }
 
+.insta, .etsy {
+    max-width: 35px;
+    max-height: 35px;
+    padding-right: 20px;
+}
 
+.etsy {
+    margin-left: 20px;
+}
 
 
 @media (min-width: 1200px) { 
@@ -99,6 +107,7 @@
     .logoMain {
         font-size: 10em;
         height: 135px;
+        top:20px
     }
 
     .dividerMain {
@@ -149,14 +158,10 @@
         display: block;
     }
 
-    .insta, .etsy {
-        max-width: 35px;
-        max-height: 35px;
-        padding-right: 20px;
-    }
     
     .etsy {
-        padding-left: 70px;
+        padding-left: 50px;
+        padding-right: 20px;
         cursor: pointer;
     }
     
