@@ -94,31 +94,64 @@ dd {
     opacity: 0.5;
 }
 
-.slick-slide {
-  padding: 0px;
-  max-width: 260px;
-  
-}
-
-.slick-slide>div:first-of-type {
-  display: flex;
-  flex-direction: column;
-  //padding: 0px 20px 20px 20px;
-  justify-content: center;
-}
-
-.slick-dots {
-  position: relative !important;
-  bottom: 0px !important;
-}
-
-.slick-dots li.slick-active button:before {
-  font-size: 10px;
-}
-
 .slick-slider {
-  padding-top: 80px;
+  height: 100%;
+  display: flex !important;
+  align-items: flex-start;
+  padding-top: 20px;
 }
+
+.slick-list {
+  height: 80% !important;
+}
+.slick-track {
+  height: 100%;
+}
+
+.slick-slide {
+  display: flex !important;
+}
+
+.slick-slide :first-child {
+  width: 100%;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+// .slick-slide :first-child {
+//   width: 100%;
+// }
+
+.slick-track {
+  background-image: url(/public/brown-texture2.jpg);
+}
+// .slick-slide {
+//   padding: 0px;
+//   max-width: 260px;
+  
+// }
+
+// .slick-slide>div:first-of-type {
+//   display: flex;
+//   flex-direction: column;
+//   //padding: 0px 20px 20px 20px;
+//   justify-content: center;
+// }
+
+// .slick-dots {
+//   position: relative !important;
+//   bottom: 0px !important;
+// }
+
+// .slick-dots li.slick-active button:before {
+//   font-size: 10px;
+// }
+
+//  .slick-slider {
+//    padding-top: 80px;
+//  }
 
 // bootstrap tab styles
 

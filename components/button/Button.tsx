@@ -4,7 +4,7 @@ import React from 'react'
 
 const HumanButton = (props) => {
 
-    type style = "full" | "outline" | "warning";
+    type style = "full" | "outline" | "warning" | "mobile";
     
     type props = {
         style: style,
@@ -28,12 +28,19 @@ const HumanButton = (props) => {
                 {props.text}
                 <img className={styles.buttonImage} src={props.buttonImage}/>
             </button>
+
+            case "mobile":
+                return <button type="submit"
+                onClick={props.onClick}
+                className={styles.mobile}>
+                <img className={styles.buttonImageMobile} src={props.buttonImage}/>
+            </button>
+
             case 'warning':
                 return <button type="submit" onClick={props.onClick}
                 className={styles.warning}>
                 {props.text}
                 <img className={styles.buttonImage} src={props.buttonImage}/>
-                
                 </button>
                 
             default:
