@@ -1,4 +1,5 @@
 import React from 'react'
+import { Col } from 'react-bootstrap'
 import Logo from '../components/logo/Logo'
 import Products from '../components/product/Products'
 import styles from '../styles/Bracelet.module.scss'
@@ -9,7 +10,7 @@ function bracelets() {
     return (
         <>
         <Logo productCategory={'bracelet'} imageLink={"/necklace-presentation-photo.png"} undertitle={shortDescription}/>
-        <Products /> 
+        <Col className={styles.productsContainer}><Products /> </Col>
       </>
         
     )

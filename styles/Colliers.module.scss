@@ -1,8 +1,18 @@
 @import "custom.pallette.scss";
 
 .presentationImage  {
+    display: none;  
+}
+
+.productsContainer {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desktopOverlay {
     display: none;
-    
 }
 
 @media (min-width: 992px) { 
@@ -12,9 +22,21 @@
         top:2%;
         left: 8%;
         display: block;
-        width: calc(22vw + 1vh);
-        
+        width: calc(22vw + 1vh);   
     }
+
+    .productsContainer {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 85%;
+        margin: auto;
+    }
+
+
+
+
 
 
 

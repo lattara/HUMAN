@@ -8,7 +8,7 @@ import { Row, Col } from 'react-bootstrap'
 function Products() {
     const carouselSettings = {
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 6,
         slidesToScroll: 1,
         arrows: false,
         dots: true,
@@ -25,7 +25,7 @@ function Products() {
             {
                 breakpoint: 922,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
@@ -46,12 +46,24 @@ function Products() {
             {
                 productsMock.map(product =>
                     <Row>
-                        <img className={styles.image} src={product.image} alt="product-image"/>
+                        <img className={styles.image} src={product.image} alt="product-image" />
                         <Col className={styles.overlay}>
-                        <img className={styles.detailsIcon} src={"/details.png"} alt="product-image"/>
-                        <span> €{product.price}</span><button>Details</button><button>Ajouter au panier</button>
+                            <span>€{product.price}</span><button>Plus d'info</button><button>Ajouter au panier</button>
                         </Col>
-                    </Row>       
+                        <Col className={styles.desktopOverlay}>
+                        <span className={styles.desktopPrice}>€{product.price}</span>
+                            <HumanButton
+                                style={"full"}
+                                text={"Je le veux!"}
+                                buttonImage="shopping.png"
+                            />
+                            <HumanButton
+                                style={"full"}
+                                text={"Plus de détails"}
+                                status="disabled"
+                                buttonImage="stone.png" />
+                        </Col>
+                    </Row>
                 )
             }
         </Slider>

@@ -12,7 +12,7 @@ function Layout(props) {
             style={
                 router.pathname === "/colliers" || router.pathname === "/bracelets"
                     ?
-                    { background: "linear-gradient(110deg, #fdd802 60%, #ffed4b 60%)" }
+                    { background: "url('yellow-background.jpg')" }
                     : { backgroundColor: null }}>
             <HumanNav />
             {props.children}

@@ -2,8 +2,11 @@
     border: 1px solid red;
 } 
 
-.productContainer {
-    padding-top: 70px;
+.productsContainer {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .presentationImage  {
@@ -21,8 +24,13 @@
         width: calc(22vw + 1vh);   
     }
 
-    .productContainer {
-        padding-top: 100px;
+    .productsContainer {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 85%;
+        margin: auto;
     }
 
 

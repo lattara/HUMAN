@@ -11,7 +11,7 @@ function colliers() {
   return (
       <>
         <Logo productCategory={'collier'} imageLink={"/necklace-presentation-photo.png"} undertitle={shortDescription}/>
-        <Products /> 
+        <Col className={styles.productsContainer}><Products /> </Col>
     </>
   )
 }
