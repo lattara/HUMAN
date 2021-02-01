@@ -67,11 +67,9 @@
 }
 
 .mobile {
-	display: inline-block;
-    text-decoration: none;
-	background:$primary-yellow-gradient;
-    width: 55px;
-    height: 60px;
+	background:$primary-yellow;
+    min-width: 55px;
+    min-height: 60px;
     line-height: 120px;
     border-radius: 50%;
     text-align: center;
@@ -79,8 +77,7 @@
     vertical-align: middle;
     overflow: hidden;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
-    border:none;
-    transition: .4s;
+    border:1px solid black;
 }
 
 .buttonImageMobile {

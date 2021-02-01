@@ -10,7 +10,7 @@ function Products() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: true,
         autoplay: false,
         autoplaySpeed: 2000,
@@ -46,24 +46,12 @@ function Products() {
             {
                 productsMock.map(product =>
                     <Row>
-                        <div className={styles.card}>
-                            <img src={product.image} alt="product-image" />
-                            <HumanButton
-                                    style={"mobile"}
-                                    text={"Je le veux!"}
-                                    buttonImage="shopping.png"
-                                />
-                            <div className={styles.details}>
-                                <div className={styles.price}>{product.price}€</div>
-                                
-                                <h3>{product.name}</h3>
-                                <p>{product.description}</p>
-                                <div className={styles.tags}>{product.tags.map(tag => <span className={styles.tag} key={product.tags.indexOf(tag)}>{` ${tag}`}</span>)}</div>
-                               
-                            </div>
-                        </div>
-                    </Row>
-
+                        <img className={styles.image} src={product.image} alt="product-image"/>
+                        <Col className={styles.overlay}>
+                        <img className={styles.detailsIcon} src={"/details.png"} alt="product-image"/>
+                        <span> €{product.price}</span><button>Details</button><button>Ajouter au panier</button>
+                        </Col>
+                    </Row>       
                 )
             }
         </Slider>
