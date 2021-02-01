@@ -45,7 +45,7 @@ function Products() {
         <Slider {...carouselSettings} >
             {
                 productsMock.map(product =>
-                    <Row>
+                    <Row key={product.id}>
                         <img className={styles.image} src={product.image} alt="product-image" />
                         <Col className={styles.overlay}>
                             <span>€{product.price}</span><button>Plus d'info</button><button>Ajouter au panier</button>
