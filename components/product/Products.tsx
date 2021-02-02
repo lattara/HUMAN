@@ -6,67 +6,41 @@ import styles from './Products.module.scss'
 import { Row, Col } from 'react-bootstrap'
 
 function Products() {
-    const carouselSettings = {
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 922,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                // settings: "unslick"
-            }
-
-        ]
-    };
 
     return (
-        <Slider {...carouselSettings} >
+        <Row noGutters className={styles.productContainer} >
             {
                 productsMock.map(product =>
-                    <Row key={product.id}>
-                        <img className={styles.image} src={product.image} alt="product-image" />
-                        <Col className={styles.overlay}>
-                            <span>€{product.price}</span><button>Plus d'info</button><button>Ajouter au panier</button>
-                        </Col>
-                        <Col className={styles.desktopOverlay}>
-                        <span className={styles.desktopPrice}>€{product.price}</span>
+                    <Col xs={10} sm={2} md={2} lg={4} xl={4} key={product.id} className={styles.card}>
+                        <Row noGutters className={product.id % 2 == 0 ? styles.inner: null}>
+                            <Col xs={6} sm={6} md={6} lg={6} xl={6}>
+                            <img className={styles.image} src={product.image} alt="product-image" />
+                            </Col>
+                            <Col xs={6} sm={6} md={6} lg={6} xl={6} className={styles.details}> 
+                            <span className={styles.price}>€{product.price}</span>
+                            <span>{product.name}</span>
+                            <p>{product.description}</p>
+                            <div className={styles.buttonContainer}>
                             <HumanButton
-                                style={"full"}
+                                style={"mobile"}
                                 text={"Je le veux!"}
                                 buttonImage="shopping.png"
                             />
                             <HumanButton
-                                style={"full"}
+                                style={"mobile"}
                                 text={"Plus de détails"}
                                 status="disabled"
+                                
                                 buttonImage="stone.png" />
-                        </Col>
-                    </Row>
+                            </div>
+                            </Col>
+                        
+                        </Row>
+                    </Col>
+
                 )
             }
-        </Slider>
+        </Row>
     )
 }
 

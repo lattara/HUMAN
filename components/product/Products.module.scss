@@ -1,90 +1,61 @@
 @import "../../styles/custom.pallette.scss";
 
 
+.productContainer {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.inner {
+    display: flex ;
+    flex-direction: row-reverse;
+}
+
+.card {
+    //box-shadow: #00000040 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    //border: 1px solid rgba(0, 0, 0,0.5);
+    border-bottom: 2px solid black;
+    width: 80%;
+    padding: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;  
+    
+}
 
 .image {
-    max-width: 500px;
-    margin: auto;  
-    border-radius: 5px;
-}
-
-.overlay {
-    max-width: 500px;
-    margin: auto;  
-    position: relative;
-    top:-50px;
-    width: 90%;
-}
-
-.detailsIcon {
-    max-width: 50px;
-}
-
-.overlay button {
-    float: right;
-	padding: 10px 14px;
-	color: #FFF;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	text-decoration: none;
-	font-size: 14px;
-	line-height: 120%;
-	background-color: rgba(38, 38, 37, 0.083);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 5px;
-	-webkit-transition: background-color 300ms ease;
-	-moz-transition: background-color 300ms ease;
-	transition: background-color 300ms ease;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-.buttonContainer {
-    width: 100px;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    top:-50px;
-    left: -50px
+    max-width: 150px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .details {
-    position: relative;
-    top: -50px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    justify-content: center;
+    padding: 0px;
+    height: 100%;
 }
 
-.overlay span {
-    font-size: 30px;
-    font-weight: bolder;
-    color: $white;
+.price {
+    margin-top: 10px;
 }
 
+.details button {
+    justify-self: end;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details p {
+    padding:2px;
+    font-size: 12px;
+}
 
 @media (min-width: 922px) { 
-
-    .image {
-        max-width:250px;
-    }
-
-    .overlay {
-        display: none;
-    }
-
-    .desktopOverlay {
-        margin-top: -150px;
-        margin-left: 20px;
-    }
-
-    .desktopPrice {
-        margin-left: 10px;
-        font-size: 25px;
-        color: $white;
-        font-weight: bold;
-        background: rgb(255, 153, 0);
-    }
 
 
  }
