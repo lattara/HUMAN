@@ -5,10 +5,8 @@ import { useRouter } from 'next/router'
 
 function Layout(props) {
     const router = useRouter()
-
-    console.log(router.pathname)
     return (
-        <Container fluid
+        <Container 
             style={
                 router.pathname === "/colliers" || router.pathname === "/bracelets"
                     ?

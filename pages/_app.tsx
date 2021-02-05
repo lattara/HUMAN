@@ -12,11 +12,9 @@ function MyApp({ Component, pageProps, router }) {
   if (router.pathname.startsWith('/dashboard/') && loggedUser.role === 'admin') {
     return (
       <>
-
         <DashLayout>
           <Component {...pageProps} />
         </DashLayout>
-
       </>
     )
   }
