@@ -5,8 +5,6 @@ import { Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 import Tooltip from "@material-ui/core/Tooltip";
 
-
-
 function Logo(props) {
 
     const renderMainPage =
@@ -46,21 +44,21 @@ function Logo(props) {
         </Row>
 
     const renderOtherPage =
-        <Col xs={12} sm={12} md={{ span: 3, offset: 1 }} lg={{ span: 3, offset: 1 }} xl={12} className={styles.otherPages}>
-            <Row noGutters className={styles.logoOtherPages}>
-                <Col xs={0} sm={0} md={3} lg={3} xl={2} className={styles.presentationImage}>
-                    <img
-                        src={props.imageLink}
-                        alt="Necklace presentation photo" />
-                </Col>
-                <Col xs={12} sm={12} md={6} lg={8} xl={8}>
-                    <div className={styles.mainLogo}>HUMAN</div>
-                    <div className={styles.productCategory}>{props.productCategory}</div>
-                    <div className={styles.dividerOtherPages}></div>
-                    <Col className={styles.undertitle}>{props.undertitle}</Col>
-                </Col>
-            </Row>
-        </Col>
+        <Row noGutters className={styles.logoOtherPages}>
+            <Col xs={0} sm={0} md={6} lg={3} xl={3} className={styles.presentationImage}>
+                <img
+                    src={props.imageLink}
+                    alt="Necklace presentation photo" />
+            </Col>
+            <Col xs={12} sm={12} md={6} lg={8} xl={8}>
+                <Row noGutters className={styles.logoText}>
+                    <Col xs={4} sm={4} md={6} lg={6} xl={4}>HUMAN</Col>
+                    <Col xs={2} sm={2} md={2} lg={2} xl={2} className={styles.productCategory}>{props.productCategory}</Col>
+                </Row>
+                <Col className={styles.dividerOtherPages}></Col>
+                <Col className={styles.undertitle}>{props.undertitle}</Col>
+            </Col>
+        </Row>
     return (
         <React.Fragment>
             {props.isMain ? renderMainPage : renderOtherPage}

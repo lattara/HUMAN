@@ -16,6 +16,16 @@
     align-items: baseline;
 }
 
+.insta, .etsy {
+    max-width: 35px;
+    max-height: 35px;
+    padding-right: 20px;
+}
+
+.etsy {
+    margin-left: 20px;
+}
+
 .dividerMain {
     border-top: 5px solid $black;
 }
@@ -34,21 +44,16 @@
 // render other pages styles
 
 .logoOtherPages {
+    display: flex;
+    width: 100%;
     font-size: 20px;
     font-family: $font-primary;
     color: $black;   
     text-align: right;
-    position: relative;
     line-height: 0.9;
     text-align: right;
-    top:60px;
-    width: 100%;
-    padding: 0px;
-    height: 80px;
-}
-
-    .otherPages {
-    padding:0px ;
+    justify-content: center;
+    align-items: center;
 }
 
 .productCategory {
@@ -57,6 +62,11 @@
     font-family: $font-secondary;
     margin-top: 4px;
     text-align: right;
+}
+
+.logoText {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .mainLogo, .productCategory {
@@ -72,34 +82,6 @@
     display: none;
 }
 
-@keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-30px);
-		-ms-transform:     translateY(-30px);
-		transform:         translateY(-30px)
-	}
-	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
-	}
-}
-
-.insta, .etsy {
-    max-width: 35px;
-    max-height: 35px;
-    padding-right: 20px;
-}
-
-.etsy {
-    margin-left: 20px;
-}
-
 
 @media (min-width: 1200px) { 
 
@@ -113,6 +95,10 @@
 
     .dividerMain {
         border-top: 10px solid $black;
+    }
+
+    .logoOtherPages {
+        align-self: center;
     }
     
     .secondTitleMain {
@@ -134,30 +120,41 @@
     }
 
     .logoOtherPages {
+        padding-top: 20px;
         display: flex;
         text-align: left;
         width: fit-content;
+        align-content: flex-start;
+        justify-content: flex-end;
+        flex: 1;
     }
 
-    .presentationImage {
-        display: block;
-        min-width: fit-content;
-        float: left;
-    }
-
-    .logoOtherPages:first-child {
+    // inner container
+    .logoOtherPages :first-child {
+        height: 90%;
         font-size: calc(7vw + 1vh);
         align-items: baseline;
     }
-
     .productCategory {
-        font-size: 0.4em;
+        display: flex;
+        font-size: calc(3vw + 1vh);
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .logoText {
+        justify-content: flex-start;
+    }
+
+    .presentationImage {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .undertitle {
         font-size: 20px;
         display: block;
-        padding:10px;
+        padding: 10px 0px 0px 10px;
     }
 
     .etsy {

@@ -10,7 +10,7 @@ function Layout(props) {
             style={
                 router.pathname === "/colliers" || router.pathname === "/bracelets"
                     ?
-                    { background: "url('yellow-background.jpg')" }
+                    { background: "" }
                     : { backgroundColor: null }}>
             <HumanNav />
             {props.children}
