@@ -2,6 +2,7 @@ import React from "react";
 import HumanNav from "../navigation/HumanNav";
 import Container from "react-bootstrap/Container";
 import { useRouter } from 'next/router'
+import { Row } from "react-bootstrap";
 
 function Layout(props) {
     const router = useRouter()
@@ -13,7 +14,7 @@ function Layout(props) {
                     { background: "" }
                     : { backgroundColor: null }}>
             <HumanNav />
-            {props.children}
+            <Row className="innerContainer">{props.children}</Row>
         </Container>
     )
 }
