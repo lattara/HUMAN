@@ -50,10 +50,10 @@ function Logo(props) {
                     src={props.imageLink}
                     alt="Necklace presentation photo" />
             </Col>
-            <Col xs={12} sm={12} md={6} lg={8} xl={8}>
+            <Col xs={12} sm={12} md={10} lg={8} xl={8}>
                 <Row noGutters className={styles.logoText}>
-                    <Col xs={4} sm={4} md={6} lg={6} xl={4}>HUMAN</Col>
-                    <Col xs={2} sm={2} md={2} lg={2} xl={2} className={styles.productCategory}>{props.productCategory}</Col>
+                    <Col xs={4} sm={4} md={4} lg={4} xl={4}>HUMAN</Col>
+                    <Col xs={3} sm={3} md={2} lg={2} xl={2} className={styles.productCategory}>{props.productCategory}</Col>
                 </Row>
                 <Col className={styles.dividerOtherPages}></Col>
                 <Col className={styles.undertitle}>{props.undertitle}</Col>
