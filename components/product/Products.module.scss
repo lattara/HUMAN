@@ -1,91 +1,28 @@
-@import "../../styles/custom.pallette.scss";
+ @import "../../styles/custom.pallette.scss";
+
+ .card {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+ }
+
+ .image {
+     max-width: 500px; 
+     border-radius: 5px;
+ }
 
 
 
-.image {
-    max-width: 500px;
-    margin: auto;  
-    border-radius: 5px;
-}
-
-.overlay {
-    max-width: 500px;
-    margin: auto;  
-    position: relative;
-    top:-50px;
-    width: 90%;
-}
-
-.detailsIcon {
-    max-width: 50px;
-}
-
-.overlay button {
-    float: right;
-	padding: 10px 14px;
-	color: #FFF;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	text-decoration: none;
-	font-size: 14px;
-	line-height: 120%;
-	background-color: rgba(38, 38, 37, 0.083);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 5px;
-	-webkit-transition: background-color 300ms ease;
-	-moz-transition: background-color 300ms ease;
-	transition: background-color 300ms ease;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-.buttonContainer {
-    width: 100px;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    top:-50px;
-    left: -50px
-}
-
-.details {
-    position: relative;
-    top: -50px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.overlay span {
-    font-size: 30px;
-    font-weight: bolder;
-    color: $white;
-}
 
 
-@media (min-width: 922px) { 
-
+ @media (min-width: 922px) { 
     .image {
-        max-width:250px;
-    }
+    margin: auto;
+        }
 
-    .overlay {
+    .card button, .desktopPrice {
         display: none;
     }
 
-    .desktopOverlay {
-        margin-top: -150px;
-        margin-left: 20px;
-    }
-
-    .desktopPrice {
-        margin-left: 10px;
-        font-size: 25px;
-        color: $white;
-        font-weight: bold;
-        background: rgb(255, 153, 0);
-    }
-
-
- }
+  }
 

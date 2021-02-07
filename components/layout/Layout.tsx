@@ -14,7 +14,7 @@ function Layout(props) {
                     { background: "" }
                     : { backgroundColor: null }}>
             <HumanNav />
-            <Row className="innerContainer">{props.children}</Row>
+            <div className="innerContainer">{props.children}</div>
         </Container>
     )
 }

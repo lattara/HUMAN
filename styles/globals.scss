@@ -119,21 +119,22 @@ dd {
   border-bottom: 2px solid $yellow-borders;
 }
 
-
-// table setup
-
-// .MuiTableContainer-root {
-//   width: unset !important;
-// }
+// carousel
 
 @media (min-width: 768px) { 
 
-  /* CAROUSEL STYLES DESKTOP */
-  
-  .slick-slide[aria-hidden="true"] {
-    opacity: unset;
-}
+  .innerContainer {
+    height: 100vh;
+  }
 
+  /* CAROUSEL STYLES DESKTOP */
+
+  .react-multi-carousel-list {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+  
 // styles for material UI table
 
 .MuiDrawer-paper {
