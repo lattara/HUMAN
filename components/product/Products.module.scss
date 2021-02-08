@@ -4,25 +4,84 @@
      display: flex;
      flex-direction: column;
      height: 100%;
+     overflow: hidden;
  }
 
  .image {
-     max-width: 500px; 
+     max-width: 400px; 
      border-radius: 5px;
+     align-self: center;
+     width: 100%;
+ }
+
+ .price {
+     font-size: 25px;
+     font-weight: bolder;
+     font-family: $font-secondary;
+ }
+
+ .buttonContainer {
+     max-width: 400px;
+     align-self: center;
+ }
+
+ .dots button {
+     border-radius: 0px;
+     height: 2px;
+     width: 20px;
+     border: 2px solid $primary-yellow
+ }
+
+ .dots:active button {
+     background: $primary-yellow;
+ }
+
+//  .divider {
+//      border-bottom: 5px solid $primary-yellow;
+//      max-width: 300px;
+//      margin: 20px 80px 0px 80px;
+//  }
+
+ .buttonContainer button {
+     position: relative;
+     top:-50px;
  }
 
 
-
-
-
- @media (min-width: 922px) { 
+    @media (min-width: 922px) { 
+    
     .image {
-    margin: auto;
+        margin: auto;
+        max-width: 230px;
+    }
+
+        .buttonContainer {
+            max-width: 200px;
+            align-self: center;
         }
 
     .card button, .desktopPrice {
         display: none;
     }
+
+    .price {
+        display: none;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .buttonContainer {
+    
+    }
+
+    .arrowLeft, .arrowRight {
+        max-height: 80px;
+    }
+
+
+
 
   }
 
