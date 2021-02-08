@@ -1,56 +1,52 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { productsMock } from './productsMOCK'
-import Carousel from "react-multi-carousel"
+import ItemsCarousel from 'react-items-carousel';
 import "react-multi-carousel/lib/styles.css"
 import { Row, Col } from 'react-bootstrap'
 import styles from './Products.module.scss'
 import HumanButton from '../button/Button'
-import {CustomButtonGroupAsArrows} from "./CustomArrows";
+import { useViewport } from "../../customHooks"
 
 //https://www.npmjs.com/package/react-multi-carousel
 
 function Products() {
+    const [numberOfSlides, setNumberOfSlides] = React.useState(0);
+    const { width } = useViewport();
+    const breakpoint = 922;
+    const [activeItemIndex, setActiveItemIndex] = useState(0);
 
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 922 },
-            items: 6,
-        },
-        tablet: {
-            breakpoint: { max: 922, min: 464 },
-            items: 1
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            showDots: true
+    useEffect(() => {
+        if (width < breakpoint) {
+            setNumberOfSlides(1)
+        } else {
+            setNumberOfSlides(6)
         }
-    };
-    
-    return (
-        <Carousel
-            responsive={responsive}
-            additionalTransfrom={0}
-            arrows={true}
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-        >
+    }, [width])
 
+    return (
+        <ItemsCarousel
+            infiniteLoop={false}
+            gutter={10}
+            alwaysShowChevrons={true}
+            numberOfCards={numberOfSlides}
+            slidesToScroll={2}
+            showSlither={true}
+            firstAndLastGutter={true}
+            activeItemIndex={activeItemIndex}
+            requestToChangeActive={setActiveItemIndex}
+            rightChevron={width > breakpoint ? <img src={"right-arrow.png"} className={styles.arrowLeft} /> : null}
+            leftChevron={width > breakpoint ? <img src={"left-arrow.png"} className={styles.arrowLeft} /> : null}
+            classes={{
+                wrapper: "wrapper",
+                itemsWrapper: "itemsWrapper",
+                rightChevronWrapper: "rightChevronWrapper",
+                leftChevronWrapper: "leftChevronWrapper"
+            }
+            }
+        >
             {productsMock.map(product =>
                 <Col key={product.id} className={styles.card}>
                     <img className={styles.image} src={product.image} alt="product-image" />
-
                     <Col className={styles.buttonContainer}>
                         <HumanButton
                             style={"mobile"}
@@ -65,11 +61,9 @@ function Products() {
                         <div className={styles.price}>€{product.price},00</div>
                         <div className={styles.divider}></div>
                     </Col>
-
                 </Col>
-
             )}
-        </Carousel>
+        </ItemsCarousel>
     )
 }
 

@@ -96,17 +96,22 @@ dd {
 
   /* CAROUSEL STYLES */
 
-  .slick-slide :first-child {
+  .wrapper {
     width: 100%;
-}
-
-
-// bootstrap tab styles
+      margin: auto;
+      margin-top: 50px;
+  }
+  
+  .rightChevronWrapper, .leftChevronWrapper {
+    background: $white;
+    width: 100px;
+  }
+  
+// bootstrap styles
 
 .nav {
   height: 20px;
 }
-
 
 .nav-link.active {
   border-bottom: 5px solid $primary-yellow;
@@ -122,17 +127,6 @@ dd {
   border-bottom: 2px solid $yellow-borders;
 }
 
-.react-multi-carousel-list {
-  height: 90%;
-}
-
-// carousel
-
-//custom dots
-
-.react-multi-carousel-dot--active button {
-  background: $primary-yellow !important ;
-}
 
 @media (min-width: 768px) { 
 
@@ -146,14 +140,12 @@ dd {
 
   /* CAROUSEL STYLES DESKTOP */
 
-  .react-multi-carousel-list {
-    width: 75%;
+  .wrapper {
+    width: 85% !important;
     margin: auto;
-    height: unset;
-    margin-top: 20px;
-}
-
-
+    margin-top: 50px;
+  
+  }
 
 // styles for material UI table
 

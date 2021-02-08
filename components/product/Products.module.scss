@@ -25,63 +25,32 @@
      align-self: center;
  }
 
- .dots button {
-     border-radius: 0px;
-     height: 2px;
-     width: 20px;
-     border: 2px solid $primary-yellow
- }
-
- .dots:active button {
-     background: $primary-yellow;
- }
-
-//  .divider {
-//      border-bottom: 5px solid $primary-yellow;
-//      max-width: 300px;
-//      margin: 20px 80px 0px 80px;
-//  }
-
  .buttonContainer button {
      position: relative;
      top:-50px;
  }
 
 
-    @media (min-width: 922px) { 
-    
-    .image {
-        margin: auto;
-        max-width: 230px;
-    }
+    @media (min-width: 922px) {  
+        .image {
+            margin: auto;
+            max-width: 230px;
+        }
 
         .buttonContainer {
             max-width: 200px;
             align-self: center;
         }
 
-    .card button, .desktopPrice {
-        display: none;
-    }
+        .card button, .desktopPrice {
+            display: none;
+        }
 
-    .price {
-        display: none;
-    }
+        .price {
+            display: none;
+        }
 
-    .dots {
-        display: none;
-    }
-
-    .buttonContainer {
-    
-    }
-
-    .arrowLeft, .arrowRight {
-        max-height: 80px;
-    }
-
-
-
-
+        .arrowLeft, .arrowRight {
+            max-height: 100px;
+        }
   }
-

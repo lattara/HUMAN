@@ -2,8 +2,6 @@ import React from 'react'
 import Layout from '../components/layout/Layout'
 import { withRouter } from 'next/router'
 import '../styles/globals.scss'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import DashLayout from '../components/layout/DashLayout';
 
 function MyApp({ Component, pageProps, router }) {
