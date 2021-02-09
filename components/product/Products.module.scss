@@ -30,7 +30,6 @@
      top:-50px;
  }
 
-
     @media (min-width: 922px) {  
         .image {
             margin: auto;
@@ -38,16 +37,41 @@
         }
 
         .buttonContainer {
-            max-width: 200px;
-            align-self: center;
+            display: none;
         }
 
-        .card button, .desktopPrice {
-            display: none;
+        .card {
+            cursor: pointer;
+        }
+
+        .buttonContainer button {
+            position: relative;
+            top: 50px;
+        }
+
+        .card:hover .buttonContainer {
+            width: 200px;
+            height: 500px;
+            position: absolute;
+            top:10%;
+            left: 20px;
+            display: block;
+        }
+
+        .buttonContainer button {
+            float: left;
         }
 
         .price {
-            display: none;
+            align-self: baseline;
+            position: relative;
+            top:-50px;
+            left: 35px;
+            background: $primary-yellow;
+            max-width: fit-content;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 2px;
         }
 
         .arrowLeft, .arrowRight {

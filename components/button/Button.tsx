@@ -1,5 +1,6 @@
 import styles from "../button/Button.module.scss"
 import React from 'react'
+import Tooltip from "@material-ui/core/Tooltip";
 
 
 const HumanButton = (props) => {
@@ -11,6 +12,7 @@ const HumanButton = (props) => {
         text: "",
         callback: Event,
         icon: String,
+        tooltip: String,
         onClick: Function,
     }
         switch (props.style) {
@@ -30,12 +32,13 @@ const HumanButton = (props) => {
             </button>
 
             case "mobile":
-                return <button type="submit"
+                return <Tooltip title={props.tooltip} placement="top">
+                <button type="submit"
                 onClick={props.onClick}
                 className={styles.mobile}>
                 <img className={styles.buttonImageMobile} src={props.buttonImage}/>
             </button>
-
+            </Tooltip>
             case 'warning':
                 return <button type="submit" onClick={props.onClick}
                 className={styles.warning}>
