@@ -5,6 +5,7 @@
      flex-direction: column;
      height: 100%;
      overflow: hidden;
+     max-width: 400px;
  }
 
  .image {
@@ -22,7 +23,8 @@
 
  .buttonContainer {
      max-width: 400px;
-     align-self: center;
+     align-self: flex-end;
+     height: 10px;
  }
 
  .buttonContainer button {
@@ -38,6 +40,7 @@
 
         .buttonContainer {
             display: none;
+            align-self: center;
         }
 
         .card {
