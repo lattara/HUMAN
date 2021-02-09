@@ -7,6 +7,12 @@ type navBarItem = {
 
 export const navItems: navBarItem[] = [
     {
+        id:0,
+        label: "page d'accueil",
+        link: "/home",
+        icon: "home-main.png"
+    },
+    {
         id: 1,
         label: 'Connexion',
         link: '/login',

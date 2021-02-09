@@ -7,8 +7,8 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 function HumanNav() {
     const loggedUser = { name: 'Name', role: 'admin' }
-    const topNav = navItems.filter(navBarItem => navBarItem.id === 1 || navBarItem.id === 2 || loggedUser.role === "admin" && navBarItem.id === 3)
-    const bottomNav = navItems.filter(navBarItem => navBarItem.id != 1 && navBarItem.id != 2 && navBarItem.id != 3)
+    const topNav = navItems.filter(navBarItem =>  navBarItem.id === 0 || navBarItem.id === 1 || navBarItem.id === 2 || loggedUser.role === "admin" && navBarItem.id === 3)
+    const bottomNav = navItems.filter(navBarItem =>  navBarItem.id != 0 && navBarItem.id != 1 && navBarItem.id != 2 && navBarItem.id != 3)
 
     return (
         <Nav>
