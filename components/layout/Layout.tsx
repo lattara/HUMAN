@@ -2,19 +2,18 @@ import React from "react";
 import HumanNav from "../navigation/HumanNav";
 import Container from "react-bootstrap/Container";
 import { useRouter } from 'next/router'
-import { Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 function Layout(props) {
     const router = useRouter()
     return (
-        <Container 
-            style={
-                router.pathname === "/colliers" || router.pathname === "/bracelets"
-                    ?
-                    { background: "" }
-                    : { backgroundColor: null }}>
+        <Container fluid>
+            <Row style={{height: "85%"}}>
             <HumanNav />
-            <div className="innerContainer">{props.children}</div>
+                <Col xs={12} sm={12} md={12} lg={{ span: 10, offset: 1 }} xl={{ span: 10, offset: 1 }} style={{padding:"50px"}}>
+            {props.children}
+                </Col>
+            </Row>
         </Container>
     )
 }

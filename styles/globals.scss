@@ -18,23 +18,26 @@ body,
   overflow: hidden;
 }
 
-.container {
+.container-fluid {
   padding: 0px;
   height: 100%;
   max-width: 100%;
+  max-height: 100%;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.innerContainer {
-  height: 85vh;
+.row {
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
-.row, .col {
-  padding: 0px;
-  margin: 0px;
+input {
+  width: 100%;
 }
+
 
 ul {
   padding: 0;
