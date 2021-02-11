@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ContactForm.module.scss'
 import { Formik, Field, Form, FormikHelpers, useFormik, FormikProvider } from 'formik';
 import HumanButton from '../button/Button';
+import { Col, Row } from 'react-bootstrap';
 
 
 const onSubmit = values => { alert("form sent") }
@@ -31,8 +32,9 @@ function LoginForm() {
     })
 
     return (
+      <Row>
+        <Col>
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit}>
-
             <form className={styles.form} onSubmit={formik.handleSubmit} action="" >
                 <label htmlFor="email">Email</label>
                 <Field  
@@ -60,7 +62,8 @@ function LoginForm() {
                                 />
             </form>
             </Formik>
- 
+            </Col>
+ </Row>
     )
 }
 export default LoginForm

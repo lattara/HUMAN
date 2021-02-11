@@ -7,10 +7,11 @@ import { Row, Col } from "react-bootstrap";
 function Layout(props) {
     const router = useRouter()
     return (
-        <Container fluid>
-            <Row style={{height: "85%"}}>
+        <Container style={{maxWidth: "100vw", padding:"0px"}}>
             <HumanNav />
-                <Col xs={12} sm={12} md={12} lg={{ span: 10, offset: 1 }} xl={{ span: 10, offset: 1 }} style={{padding:"50px"}}>
+            <Row>
+            
+                <Col xs={12} sm={12} md={12} lg={{ span: 10, offset: 1 }} xl={{ span: 10, offset: 1 }} style={{ padding:"0px"}}>
             {props.children}
                 </Col>
             </Row>
