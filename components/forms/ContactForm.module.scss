@@ -18,6 +18,15 @@
   height: 77.5%;
   }
 
+  .contactForm {
+    border: 1px solid $yellow-borders;
+  background-color: $primary-yellow;
+  //animation: bounce 1.5s infinite;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  padding: 35px;
+  border-radius: 0px 5px 5px 0px; 
+  }
+
     @keyframes bounce {
     0% {
       tranform: translate(0, 4px);

@@ -15,24 +15,29 @@ function about() {
     return width < breakpoint ?
 
         <Row className={styles.aboutContainer}>
-            <HumanTabs />
+            <Col> <HumanTabs /></Col>
         </Row>
         :
-        <Row noGutters className={styles.aboutContainer}>
-            <Col className={styles.bioContainer}>
-                <img className={styles.image} src="/contact-profile-img.png" />
-                <h3 className={styles.name}>Charlotte</h3>
-                <p className={styles.aboutText}>{text}</p>
-
+        <Row className={styles.aboutContainer} noGutters>
+            <Col className={styles.bioContainer} xs={12} sm={12} md={5} lg={6} xl={5}>
+                <Row>
+                    <Col xs={12} sm={12} md={12} lg={12} xl={12}><img className={styles.image} src="/contact-profile-img.png" /></Col>
+                    <Col xs={12} sm={12} md={12} lg={12} xl={12} ><h3 className={styles.name}>Charlotte</h3></Col>
+                    <p className={styles.aboutText}>{text}</p>
+                </Row>
             </Col>
-            <Col className={styles.contactContainer}>
-                <Col className={styles.title}>
-                    <div>
-                    <h3>"Vous avez une question? </h3>
-                    <span>Ou vous voulez simplement dire bonjour"</span>
-                    </div>
-                    <ContactForm />
-                </Col> 
+            <Col className={styles.contactContainer} xs={12} sm={12} md={5} lg={4} xl={6}>
+                <Row className={styles.title}>
+                    <Col>
+                        <Row>
+                            <Col><h3>"Vous avez une question? </h3></Col>
+                            <Col xs={12} sm={12} md={6} lg={12} xl={12}><span>Ou vous voulez simplement dire bonjour"</span></Col>
+                        </Row>
+                    </Col>
+                    <Col xs={12} sm={12} md={6} lg={12} xl={12}>
+                        <ContactForm />
+                    </Col>
+                </Row>
             </Col>
         </Row>
 

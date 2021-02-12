@@ -44,7 +44,7 @@ function ContactForm() {
     return (
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit}>
 
-            <form className={styles.form} onSubmit={formik.handleSubmit} action="" >
+            <form className={styles.contactForm} onSubmit={formik.handleSubmit} action="" >
             <h4>Contactez moi!</h4>
                 <label htmlFor="nom">Nom</label>
                 <Field 

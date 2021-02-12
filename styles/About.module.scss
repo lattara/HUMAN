@@ -1,16 +1,24 @@
 @import "custom.pallette.scss";
 
 .aboutContainer {
-    height: 100vh;
     background: linear-gradient(110deg, #fdd802 60%, #ffed4b 60%);
+    position: fixed;
+    top:0px;
+    height: 100%;
+}
+
+.contactContainer {
+    align-self: center;
+    margin-left:0px
 }
 
 @media (min-width: 922px) { 
 
     .image {
-        max-width: 500px;
+        max-width: 430px;
     }
     .aboutText {
+        margin: 15px;
         max-width: 450px;
         text-align: justify;
     }
@@ -22,29 +30,23 @@
         justify-content: center;
         align-items: center;
         max-width: 800px;
+        min-width: 600px;
+        max-height: 100%;
     }
     .aboutContainer {
-        padding-left: 120px;
         background: none;
         display: flex;
     }
 
     .contactContainer {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .title { 
-        margin: 120px 0px 0px -150px;
+        align-self: center;
+        margin-left: -12%;
     }
 
     .title h3 {
         font-size: 3em;
     }
 
-    .name{
-        margin-top: 10px;
-    }
-
 }
+
+
