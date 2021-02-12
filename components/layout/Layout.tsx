@@ -12,7 +12,7 @@ function Layout(props) {
 
             <Container fluid style={{ maxWidth: "100vw", padding: "0px" }}>
                 <HumanNav /> 
-                <Row noGutters>
+                <Row noGutters style={{maxHeight:"80vh"}}>
                     <Col xs={12} sm={12} md={12} lg={12} xl={12}>{props.children}</Col>
                 </Row>
 

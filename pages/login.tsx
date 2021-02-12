@@ -8,12 +8,7 @@ function login() {
 
     return (
         <Row noGutters>
-            <Col xs={12} sm={12} md={12} lg={4} xl={4}>
-                <Row>
-                    <img src="presentation1.png" alt="" style={{width:"100%"}}/>
-                </Row>
-            </Col>
-            <Col xs={12} sm={12} md={12} lg={8} xl={8} > 
+            <Col xs={12} sm={12} md={12} lg={8} xl={8} style={{marginTop:"50px"}}> 
                 <Tabs style={{display:"flex", flexDirection:"row"}}
                     id="controlled-tab-example"
                     activeKey={key}

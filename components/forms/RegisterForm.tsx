@@ -60,8 +60,7 @@ function RegisterForm() {
                         <Col>
                             {/* first and last name */}
                             <Row noGutters>
-                                <Col>
-                                    <Row>
+
                                         <Col>
                                             <Row><label htmlFor="firstname">Prénom</label></Row>
                                             <Row> <Field
@@ -115,14 +114,12 @@ function RegisterForm() {
 
 
                                         </Col>
-                                    </Row>
-                                </Col>
+
                             </Row>
                             {/* email */}
                             <Row noGutters>
                                 <Col>
-                                    <Row>
-                                        <Col>
+                                    
                                             <Row><label htmlFor="firstname">Email</label></Row>
                                             <Row>
                                                 <Field
@@ -147,14 +144,12 @@ function RegisterForm() {
                                             </Row>
                                         </Col>
 
-                                    </Row>
-                                </Col>
+
                             </Row>
                             {/* password and confirm password */}
                             <Row noGutters>
                                 <Col>
-                                    <Row>
-                                        <Col>
+                                    
                                             <Row><label htmlFor="firstname">Mot de passe</label></Row>
                                             <Row> <Field
                                                 id="firstname"
@@ -179,7 +174,7 @@ function RegisterForm() {
                                         </Col>
                                         <Col>
 
-                                            <Row><label htmlFor="firstname">Confirmez le mot de passe</label></Row>
+                                            <Row><label htmlFor="firstname">Confirmation du mdp</label></Row>
                                             <Row> <Field
                                                 id="lastname"
                                                 name="lastname"
@@ -201,8 +196,7 @@ function RegisterForm() {
                                                 }
                                             </Row>
                                         </Col>
-                                    </Row>
-                                </Col>
+                        
                             </Row>
                             {/* ADDRESS */}
                             <Row>
@@ -211,8 +205,7 @@ function RegisterForm() {
                             {/* Street */}
                             <Row noGutters>
                                 <Col>
-                                    <Row>
-                                        <Col>
+  
                                             <Row><label htmlFor="street">Numéro de rue</label></Row>
                                             <Row> <Field
                                                 id="street"
@@ -234,16 +227,13 @@ function RegisterForm() {
                                                         </div>
                                                 }
                                             </Row>
-                                        </Col>
 
-                                    </Row>
                                 </Col>
 
 
 
                                 <Col>
-                                    <Row>
-                                        <Col>
+
                                             <Row><label htmlFor="town">Ville</label></Row>
                                             <Row> <Field
                                                 id="town"
@@ -266,39 +256,13 @@ function RegisterForm() {
                                                 }
                                             </Row>
                                         </Col>
-                                        <Col>
 
-                                            <Row><label htmlFor="postcode">Code postal</label></Row>
-                                            <Row> <Field
-                                                id="postcode"
-                                                name="postcode"
-                                                placeholder="Votre nom code postal ici"
-                                                type="text"
-                                                onChange={formik.handleChange}
-                                                value={formik.values.postcode}
-                                            /></Row>
-                                            <Row>
-                                                {
-                                                    formik.errors.postcode &&
-                                                        formik.touched.postcode &&
-                                                        formik.isValid === false
-                                                        ?
-                                                        <div className={styles.errorMsg}>{formik.errors.postcode}</div>
-                                                        :
-                                                        <div className={styles.errorMsg}>
-                                                        </div>
-                                                }
-                                            </Row>
-                                        </Col>
-                                    </Row>
-                                </Col>
+
                             </Row>
                             {/* Town */}
 
                             {/* Country */}
                             <Row noGutters>
-                                <Col>
-                                    <Row>
                                         <Col>
                                             <Row><label htmlFor="country">Pays</label></Row>
                                             <Row> <Field
@@ -321,6 +285,30 @@ function RegisterForm() {
                                                         </div>
                                                 }
                                             </Row>
+
+
+                                            <Row><label htmlFor="postcode">Code postal</label></Row>
+                                            <Row> <Field
+                                                id="postcode"
+                                                name="postcode"
+                                                placeholder="Votre nom code postal ici"
+                                                type="text"
+                                                onChange={formik.handleChange}
+                                                value={formik.values.postcode}
+                                            /></Row>
+                                            <Row>
+                                                {
+                                                    formik.errors.postcode &&
+                                                        formik.touched.postcode &&
+                                                        formik.isValid === false
+                                                        ?
+                                                        <div className={styles.errorMsg}>{formik.errors.postcode}</div>
+                                                        :
+                                                        <div className={styles.errorMsg}>
+                                                        </div>
+                                                }
+                                            </Row>
+
                                         </Col>
 
                                     </Row>
@@ -334,8 +322,7 @@ function RegisterForm() {
                                 />
                             </Row>
                         </Col>
-                    </Row>
-                </Col>
+
             </Form>
         </Formik>
     )
