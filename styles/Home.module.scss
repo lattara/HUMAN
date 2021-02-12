@@ -1,12 +1,22 @@
 @import "custom.pallette.scss";
 
 
+.homeContainer {
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
 .yellowBlock {
     background: url("/yellow-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+    top:100%;
     height: 50vh;
+    z-index: -2;
 }
+
 
 .textureBlock {
     background: url("/brown-texture.jpg");
@@ -38,38 +48,28 @@
 }
 
 
-
-
 // -------------------------------
 
 // desktop 
 
-@media (min-width: 768px) { 
+@media (min-width: 738px) { 
 
-    .yellowBlock {
-        background: url("/yellow-background.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 50vh;
+    .homeContainer {
+        position: fixed;
+        top:0px;
+        left:0px
     }
-    
+
     .textureBlock {
         background: url("/brown-texture.jpg");
         background-repeat: repeat;
-        background-size: contain;
+        background-size: repeat;
         height: 50vh;
         display: flex;
         justify-content: baseline;
         align-items: flex-end;
     }
-
-    .dividerTop {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        height: 50%;
-        border-top: 10px solid;
-        border-color: $black;
-    }
+    
+    
     
 }

@@ -45,14 +45,14 @@ function Logo(props) {
 
     const renderOtherPage =
         <Row noGutters className={styles.logoOtherPages}>
-            <Col xs={0} sm={0} md={6} lg={3} xl={3} className={styles.presentationImage}>
+            <Col xs={0} sm={0} md={6} lg={4} xl={"auto"} className={styles.presentationImage}>
                 <img
                     src={props.imageLink}
                     alt="Necklace presentation photo" />
             </Col>
             <Col xs={12} sm={12} md={10} lg={8} xl={8}>
                 <Row noGutters className={styles.logoText}>
-                    <Col xs={4} sm={4} md={4} lg={4} xl={4}>HUMAN</Col>
+                    <Col xs={4} sm={4} md={4} lg={4} xl={"auto"}>HUMAN</Col>
                     <Col xs={3} sm={3} md={2} lg={2} xl={2} className={styles.productCategory}>{props.productCategory}</Col>
                 </Row>
                 <Col className={styles.dividerOtherPages}></Col>

@@ -89,11 +89,6 @@ dd {
   
 // bootstrap styles
 
-.nav {
-  height: 20px;
-}
-
-
 .nav-tabs {
   border-bottom: none;
 }
@@ -119,10 +114,8 @@ dd {
   /* CAROUSEL STYLES DESKTOP */
 
   .wrapper {
-    width: 85% !important;
-    margin: auto;
     margin-top: 50px;
-  
+    margin-left: -50px;
   }
 
 // styles for material UI table

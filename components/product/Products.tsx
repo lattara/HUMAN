@@ -18,7 +18,7 @@ function Products() {
         if (width < breakpoint) {
             setNumberOfSlides(1)
         } else {
-            setNumberOfSlides(6)
+            setNumberOfSlides(7)
         }
     }, [width])
 
