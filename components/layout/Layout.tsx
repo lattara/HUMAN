@@ -11,7 +11,7 @@ function Layout(props) {
             <HumanNav />
             <Row>
             
-                <Col xs={12} sm={12} md={12} lg={{ span: 10, offset: 1 }} xl={{ span: 10, offset: 1 }} style={{ padding:"0px"}}>
+                <Col xs={12} sm={12} md={12} lg={{ span: 10, offset: 2 }} xl={{ span: 10, offset: 2 }} style={{ padding:"0px"}}>
             {props.children}
                 </Col>
             </Row>

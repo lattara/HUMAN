@@ -32,7 +32,7 @@ function LoginForm() {
     })
 
     return (
-      <Row>
+      <Row noGutters>
         <Col>
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit}>
             <form className={styles.form} onSubmit={formik.handleSubmit} action="" >
