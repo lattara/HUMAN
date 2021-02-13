@@ -27,7 +27,7 @@ function HumanNav() {
 
                     )}
             </Row>
-            <Row className={styles.bottomNav}>
+            <Row className={styles.bottomNav} noGutters>
                 {
                     bottomNav.map(navItem =>
                         <Col key={navItem.id} className={styles.navIcon}>

@@ -9,7 +9,6 @@ function Layout(props) {
     console.log(router.pathname)
     if (router.pathname === "/home") {
         return (
-
             <Container fluid style={{ maxWidth: "100vw", padding: "0px" }}>
                 <HumanNav /> 
                 <Row noGutters style={{maxHeight:"80vh"}}>
@@ -23,8 +22,8 @@ function Layout(props) {
         return (
             <Container style={{ maxWidth: "100vw", padding: "0px" }}>
                 <HumanNav />
-                <Row>
-                    <Col xs={12} sm={12} md={12} lg={{ span: 11, offset: 1 }} xl={{ span: 11, offset: 1 }} style={{ padding: "0px" }}>
+                <Row style={{display: "flex", justifyContent: "center"}}>
+                    <Col xs={12} sm={12} md={12} lg={{ span: 10 }} xl={{ span: 10}}>
                         {props.children}
                     </Col>
                 </Row>

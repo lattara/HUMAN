@@ -14,22 +14,24 @@
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   padding: 15px;
   border-radius: 0px 5px 5px 0px; 
-  max-height: 70%;
-  width: 80%;
+  width: 100%;
   margin: auto;
+  }
+
+  .loginForm {
+    border: 1px solid $yellow-borders;
+    background-color: $primary-yellow;
+    //animation: bounce 1.5s infinite;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    padding: 15px;
+    border-radius: 0px 5px 5px 0px; 
+    width: 100%;
+    margin: auto;
+    min-height: 454px;
   }
 
   .form label {
     font-size: 12px;
-  }
-
-  .contactForm {
-    border: 1px solid $yellow-borders;
-  background-color: $primary-yellow;
-  //animation: bounce 1.5s infinite;
-  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-  padding: 35px;
-  border-radius: 0px 5px 5px 0px; 
   }
 
     @keyframes bounce {
@@ -47,7 +49,6 @@
   }
 
   .form {
-      max-width: 60%;
       padding: 35px;
   }
 
