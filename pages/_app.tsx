@@ -3,25 +3,28 @@ import Layout from '../components/layout/Layout'
 import { withRouter } from 'next/router'
 import '../styles/globals.scss'
 import DashLayout from '../components/layout/DashLayout';
+import Container from 'react-bootstrap/Container'
 
 function MyApp({ Component, pageProps, router }) {
   const loggedUser = { name: 'Name', role: 'admin' }
 
   if (router.pathname.startsWith('/dashboard/') && loggedUser.role === 'admin') {
     return (
-      <>
+      <Container fluid style={{ maxWidth: "100vw", height:"100vh", padding: "0px", overflow:"hidden"}}>
         <DashLayout>
           <Component {...pageProps} />
         </DashLayout>
-      </>
+      </Container>
     )
   }
   else {
     return (
       <>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Container fluid style={{ maxWidth: "100vw", height:"100vh", padding: "0px", overflow:"hidden"}}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Container>
       </>
     )
   }
