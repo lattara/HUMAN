@@ -1,10 +1,11 @@
 @import "custom.pallette.scss";
 
-.aboutContainer {
-    background: linear-gradient(110deg, #fdd802 60%, #ffed4b 60%);
+.mobileContainer {
+    background:url("/brown-texture.jpg");
     position: fixed;
     top:0px;
     height: 100%;
+    z-index: -2;
 }
 
 .contactContainer {
@@ -12,41 +13,39 @@
     margin-left:0px
 }
 
+
 @media (min-width: 922px) { 
 
-    .image {
-        max-width: 430px;
-    }
-    .aboutText {
-        margin: 15px;
-        max-width: 450px;
-        text-align: justify;
-    }
-
-    .bioContainer {
-        background: url("/brown-texture.jpg");
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 800px;
-        min-width: 600px;
-        max-height: 100%;
-    }
     .aboutContainer {
-        background: none;
         display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .contactContainer {
-        align-self: center;
-        margin-left: -12%;
+    .backgroundTexture {
+        position: fixed;
+        top:0px;
+        height: 100%;
+        left:10%;
+        background: url("/brown-texture.jpg");
+        max-width: 800px;
+        min-width: 600px;  
+        z-index: -1;      
     }
 
-    .title h3 {
+    .image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .name {
+        align-self: start !important;
         font-size: 3em;
     }
 
+    .aboutText {
+        max-width: 400px;
+        text-align: justify;
+    }
+
 }
-
-

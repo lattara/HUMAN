@@ -7,7 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 function home() {
     return (
         <Row className={styles.homeContainer}>
-            <Col style={{padding: "0px"}}>
+            <Col>
                 <Row className={styles.textureBlock} >
                     <Logo isMain={true} />
                 </Row>
