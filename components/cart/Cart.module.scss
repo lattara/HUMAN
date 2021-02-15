@@ -1,0 +1,71 @@
+@import "../../styles/custom.pallette.scss";
+
+.cartBlock {
+    border: 2px solid $primary-yellow;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.greeting {
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 15px 15px 0px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: $font-primary;
+    background-color: $primary-yellow;
+    width: 100%;
+}
+
+.table {
+    margin: auto;
+    width: 95%;
+}
+
+.table th, .table td {
+    border: none;
+    line-height: 1.5px;
+    font-family: $font-secondary;
+}
+
+.tableRowTotal :last-child {
+    border-bottom: 2px solid $black;
+    width: 25%;
+}
+
+.greeting em {
+    margin: 0px 10px 0px 10px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: $font-primary;
+    color: $black;
+    font-weight: bolder;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 922px) {
+
+    .cartBlock{
+        min-height: 650px;
+    }
+
+    .greeting {
+        padding: 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .greeting span {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .table th, .table td {
+        line-height: unset;
+    }
+} 
