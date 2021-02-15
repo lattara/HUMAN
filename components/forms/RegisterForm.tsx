@@ -54,8 +54,8 @@ function RegisterForm() {
 
     return (
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit}>
-            <Form onSubmit={formik.handleSubmit} action="" >
-                <Col className={styles.form}>
+            <Form onSubmit={formik.handleSubmit} action=""  >
+                <Col className={styles.form} >
                     <Row noGutters>
                         <Col>
                             {/* first and last name */}

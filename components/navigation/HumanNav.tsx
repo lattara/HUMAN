@@ -1,33 +1,33 @@
-import React, { useRef, useState } from 'react'
 import styles from './HumanNav.module.scss'
 import navItems from './NavItems.list'
 import Link from 'next/link'
-import { Nav, Row, Col, NavLink } from 'react-bootstrap'
+import { Nav, Col, NavLink } from 'react-bootstrap'
 import Tooltip from "@material-ui/core/Tooltip";
 
-function HumanNav() {
+function HumanNav(props) {
     const loggedUser = { name: 'Name', role: 'admin' }
-    const topNav = navItems.filter(navBarItem =>  navBarItem.id === 0 || navBarItem.id === 1 || navBarItem.id === 2 || loggedUser.role === "admin" && navBarItem.id === 3)
-    const bottomNav = navItems.filter(navBarItem =>  navBarItem.id != 0 && navBarItem.id != 1 && navBarItem.id != 2 && navBarItem.id != 3)
+    const topNav = navItems.filter(navBarItem => navBarItem.id === 0 || navBarItem.id === 1 || navBarItem.id === 2 || loggedUser.role === "admin" && navBarItem.id === 3)
+    const bottomNav = navItems.filter(navBarItem => navBarItem.id != 0 && navBarItem.id != 1 && navBarItem.id != 2 && navBarItem.id != 3)
 
-    return (
-        <Nav>
-            <Row className={styles.topNav}>
+    if (props.position === "top") {
+        return (
+            <Nav className={styles.topNav}>
                 {
                     topNav.map(navItem =>
-                        <Col bsPrefix={styles.topNavIcon} lg={1} xl={1} key={navItem.id} className={styles.navIcon}>
-                            <Link href={navItem.link} passHref>
-                                <Tooltip
-                                    title={navItem.label}
-                                    placement="top">
-                                    <NavLink><img src={navItem.icon}/></NavLink>
-                                </Tooltip>
-                            </Link>
-                        </Col>
-
+                        <Nav.Link href={navItem.link} key={navItem.id} bsPrefix={styles.navIcon}>
+                            <Tooltip
+                                title={navItem.label}
+                                placement="top">
+                                <img src={navItem.icon} />
+                            </Tooltip>
+                        </Nav.Link>
                     )}
-            </Row>
-            <Row className={styles.bottomNav} noGutters>
+            </Nav>
+        )
+
+    } else if (props.position === "bottom") {
+        return (
+            <Nav className={styles.bottomNav}>
                 {
                     bottomNav.map(navItem =>
                         <Col key={navItem.id} className={styles.navIcon}>
@@ -40,9 +40,8 @@ function HumanNav() {
                             </Link>
                             <span>{navItem.label}</span></Col>
                     )}
-            </Row>
-        </Nav>
-    )
+            </Nav>
+        )}
 }
 
 export default HumanNav

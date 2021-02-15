@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './ContactForm.module.scss'
-import { Formik, Field, Form, FormikHelpers, useFormik, FormikProvider } from 'formik';
+import { Formik, Field, useFormik, FormikProvider } from 'formik';
 import HumanButton from '../button/Button';
+import Form from 'react-bootstrap/Form'
 import { Col, Row } from 'react-bootstrap';
 
 
@@ -33,39 +34,37 @@ function LoginForm() {
 
   return (
     <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit}>
-      <form className={styles.loginForm} onSubmit={formik.handleSubmit} action="" >
-          <Row noGutters>
-            <Col>
-            <label htmlFor="email">Email</label>
-            <Field
-              id="email"
-              name="email"
-              placeholder="nom@domain.com"
-              type="email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
-            />
-            {formik.errors.email && formik.touched.email && formik.isValid === false ? <div className={styles.errorMsg}>{formik.errors.email}</div> : <div className={styles.errorMsg}></div>}
+      <Form onSubmit={formik.handleSubmit} action="" >
+        <Col className={styles.form} >
+          <label htmlFor="email">Email</label>
+          <Field
+            id="email"
+            name="email"
+            placeholder="nom@domain.com"
+            type="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+          />
+          {formik.errors.email && formik.touched.email && formik.isValid === false ? <div className={styles.errorMsg}>{formik.errors.email}</div> : <div className={styles.errorMsg}></div>}
 
-            <label htmlFor="message">Password</label>
-            <Field
-              id="Mot de passe"
-              name="Mot de passe"
-              placeholder="Votre mot de passe ici"
-              type="password"
-              onChange={formik.handleChange}
-              value={formik.values.password}
-            />
-            {formik.errors.password && formik.touched.password && formik.isValid === false ? <div className={styles.errorMsg}>{formik.errors.password}</div> : <div className={styles.errorMsg}></div>}
-            <HumanButton style={"outline"}
-              text={"Envoyer le message"}
-              buttonImage="send.png"
-            />
-            </Col>
-          </Row>
-            </form>
-            </Formik>
+          <label htmlFor="message">Password</label>
+          <Field
+            id="Mot de passe"
+            name="Mot de passe"
+            placeholder="Votre mot de passe ici"
+            type="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
+          />
+          {formik.errors.password && formik.touched.password && formik.isValid === false ? <div className={styles.errorMsg}>{formik.errors.password}</div> : <div className={styles.errorMsg}></div>}
+          <HumanButton style={"outline"}
+            text={"Envoyer le message"}
+            buttonImage="send.png"
+          />
+        </Col>
+      </Form>
+    </Formik>
 
-    )
+  )
 }
 export default LoginForm

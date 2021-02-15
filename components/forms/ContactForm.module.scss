@@ -12,45 +12,31 @@
   background-color: $primary-yellow;
   //animation: bounce 1.5s infinite;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-  padding: 15px;
   border-radius: 0px 5px 5px 0px; 
-  width: 100%;
-  margin: auto;
+
   }
 
-  .loginForm {
-    border: 1px solid $yellow-borders;
-    background-color: $primary-yellow;
-    //animation: bounce 1.5s infinite;
-    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-    padding: 15px;
-    border-radius: 0px 5px 5px 0px; 
-    width: 100%;
-    margin: auto;
-    min-height: 454px;
-  }
+  // .form label {
+  //   font-size: 12px;
+  // }
 
-  .form label {
-    font-size: 12px;
-  }
+  //   @keyframes bounce {
+  //   0% {
+  //     tranform: translate(0, 4px);
+  //   }
+  //   50% {
+  //     transform: translate(0, 8px);
+  //   }
+  // } 
 
-    @keyframes bounce {
-    0% {
-      tranform: translate(0, 4px);
-    }
-    50% {
-      transform: translate(0, 8px);
-    }
-  } 
-
-  @media (min-width: 922px) { 
+   @media (min-width: 922px) {
+     
+      .form {
+        max-height: 500px;
+        min-height: 500px;
+      }
   .textarea {
-    height:  100px;
-  }
-
-  .form {
-      padding: 35px;
-  }
-
+     height:  100px;
+   }
   }
   

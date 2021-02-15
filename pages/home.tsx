@@ -6,11 +6,13 @@ import { Row, Col } from 'react-bootstrap';
 
 function home() {
     return (
-        <Row className={styles.homeContainer} noGutters>
-            <Col className={styles.textureBlock} >
-                <Logo isMain={true} />
-            </Col>
-            <Col className={styles.yellowBlock}>
+        <Row className={styles.homeContainer}>
+            <Col style={{padding: "0px"}}>
+                <Row className={styles.textureBlock} >
+                    <Logo isMain={true} />
+                </Row>
+                <Row className={styles.yellowBlock}>
+                </Row>
             </Col>
         </Row>
     )
