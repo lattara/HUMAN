@@ -1,24 +1,62 @@
 @import "custom.pallette.scss";
 
-
 .dashboardBackground {
-    background-color: $white;
-    height: 80%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    z-index: -2;
+    background: url("../public/dashHome.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.greeting {
+    text-shadow: 2px 2px $primary-dashboard;
+    font-size: 18px;
+    color: $secondary-blue;
+}
+.blockContainer {
+    display: flex;
+    align-content: center;
+    height: 100vh;
+    overflow: scroll;
     justify-content: center;
-    padding: 0px 40px 0px 40px;    
-    align-items: center;
-  }
+    z-index: 5;
+}
 
 .columnBlock {
+    background-color: $primary-dashboard;
+    border: 1px solid $primary-borders;
     box-shadow: $block-box-shadow;
     border-radius: 5px;
-    margin: 30px 0px 20px 0px;
-    color: black;
     display: flex;
-    flex-direction: row;  
-    margin: 20px;
-    min-height: 120px;
+    flex-direction: row;
+    margin: 10px;
+    min-height: 200px;
     cursor: pointer;
+    align-items: center;
+}
+
+.iconContainer {
+    display: flex;
+    height: fit-content;
+    align-self: center;
+    justify-content: center;
+}
+
+.icon {
+    max-width: 30px;
+    max-height: 30px;
+    padding: 10px;
+    align-self: center;
+}
+
+.blockContent div:nth-of-type(2) {
+    text-align: center;
 }
 
 .columnBlock:hover {
@@ -34,50 +72,43 @@
 }
 
 .blockContent {
-    width: 100%; 
-}
-
-.blockContent div:nth-of-type(2){
-    height: fit-content;
-    /* justify-self: center; */
-    align-self: center;
-    padding: 0px 0px 0px 10px;
-}
-
-
-.iconContainer {
-    display: flex;
-    border-right: 1px solid $primary-dashboard;
-    height:90%;
-    align-self: center;
-    justify-content: center;
-}
-
-.icon {
-    max-width: 40px;
-    max-height: 40px;
-    align-self: center;
+    width: 100%;
 }
 
 .label {
     font-family: $font-secondary;
     text-transform: uppercase;
-    font-size:  17px;
-    color: $primary-dashboard;
+    font-size: 17px;
+    color: $secondary-blue;
 }
-
 
 .tooltip {
     font-family: $font-secondary;
     font-size: 12px;
-    color: $primary-dashboard;
+    color: $secondary-blue;
     overflow: visible;
 }
 
-@media (min-width: 992px) { 
-
+@media (min-width: 992px) {
+    .label {
+        font-size: 22px;
+    }
+    
+    .tooltip {
+        font-size: 15px;
+    }
     .columnBlock {
-       min-height: 220px;
+        min-height: 220px;
     }
 
+    .greeting {
+        padding: 0px 20px 0px 20px;
+        font-size: 25px;
+        color: $secondary-blue;
+    }
+
+    .blockContainer {
+        overflow: hidden;
+    }
+    
 }

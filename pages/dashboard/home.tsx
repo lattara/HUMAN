@@ -9,41 +9,42 @@ function dashboard() {
   let today = new Date()
   let hours = today.getHours()
 
-  let getCustomGreetMessage=()=>{
-    if (today.getMonth()=== 10 && today.getDate()===11 ){
-      return <h2>Joyeux anniversaire <br /> ƪ(ړײ)‎ƪ​</h2>
+  let getCustomGreetMessage = () => {
+    if (today.getMonth() === 10 && today.getDate() === 11) {
+      return <span>Joyeux anniversaire <br /> ƪ(ړײ)‎ƪ​</span>
     }
-    if (hours < 18){
-      return <h2>Bonjour Charlotte <br /> (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</h2>
-    } 
-    if (hours > 18){
-      return <h2>Bonsoir Charlotte <br /> -`ღ´-</h2>
+    if (hours < 18) {
+      return <span>Bonjour Charlotte <br /> (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧</span>
+    }
+    if (hours > 18) {
+      return <span>Bonsoir Charlotte <br /> -`ღ´-</span>
     }
   }
 
   return (
-    <Row className={styles.dashboardBackground}>
-      <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-        {getCustomGreetMessage()}
-        <dd>Sélectionnez une case pour commencer à modifier ton site Web</dd>
-        </Col>
-      {
-        dashNavItems.filter(item => item.id !== 1).map(
-          item =>
-          <Link href={item.link}>
-            <Col xs={12} sm={12} md={4} lg={3} xl={4} className={styles.columnBlock}>
-              <Row noGutters className={styles.blockContent}>
-                <Col xs={2} sm={2} md={2} lg={2} xl={2} className={styles.iconContainer}><img className={styles.icon} src={item.icon} /></Col>
-                <Col xs={6} sm={6} md={8} lg={8} xl={8} >
-                  <span className={styles.label} >{item.label}</span>
-                  <p className={styles.tooltip}>{item.tooltip}</p>
-                </Col>
-              </Row>
-            </Col>
-            </Link>
-        )
-      }
-    </Row>
+    <>
+      <div className={styles.dashboardBackground}>
+      </div>
+        <Row  className={styles.blockContainer}>
+          <Col xs={10} sm={10} md={10} lg={8} xl={8} className={styles.greeting}>{getCustomGreetMessage()}</Col><br/>
+          <Col xs={10} sm={10} md={10} lg={8} xl={8} className={styles.greeting}>Sélectionnez une case pour commencer à modifier ton site Web</Col>
+          {
+            dashNavItems.filter(item => item.id !== 1).map(
+              item =>
+                <Link href={item.link}>
+                  <Col xs={4} sm={4} md={4} lg={6} xl={4} className={styles.columnBlock}>
+                    <Row noGutters className={styles.blockContent}>
+                      <Col xs={12} sm={12} md={12} lg={12} xl={12} className={styles.iconContainer}><img className={styles.icon} src={item.icon} /></Col>
+                      <Col>
+                        <span className={styles.label} >{item.label}</span>< br/>
+                        <span className={styles.tooltip}>{item.tooltip}</span>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Link>
+            )}
+        </Row>
+    </>
   )
 }
 

@@ -7,7 +7,7 @@
 }
 
 .container-fluid{
-  overflow: unset !important;
+  overflow: hidden !important;
 }
 
 .row, .col {
@@ -35,7 +35,9 @@ h2{
 }
 
 h3 {
-  font-family: $font-primary;
+  font-size: 20px;
+  padding: 10px;
+  font-family: $font-secondary;
 }
 
 a {
@@ -66,7 +68,8 @@ p {
 }
 
 dd {
-  padding: 20px;
+  padding: 0px 10px 0px 10px;
+  font-size: 15px;
 }
 
 .cursor {

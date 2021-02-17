@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps, router }) {
 
   if (router.pathname.startsWith('/dashboard/') && loggedUser.role === 'admin') {
     return (
-      <Container fluid style={{ maxWidth: "100vw", height:"100vh", padding: "0px", overflow:"hidden"}}>
+      <Container fluid style={{ width: "100vw", height:"100vh", padding: "0px", overflow:"hidden"}}>
         <DashLayout>
           <Component {...pageProps} />
         </DashLayout>

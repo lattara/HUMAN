@@ -1,13 +1,13 @@
 import React from 'react'
-import Container from "react-bootstrap/Container";
+import { Container, Row } from 'react-bootstrap';
 import DashNav from '../dashboard/DashNav';
 
 function DashLayout(props) {
     return (
-        <Container fluid>
-            <DashNav/>
+        <>
+            <DashNav/> 
            {props.children}
-        </Container>
+        </>
     )
 }
 
