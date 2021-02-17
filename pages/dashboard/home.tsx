@@ -32,7 +32,7 @@ function dashboard() {
             dashNavItems.filter(item => item.id !== 1).map(
               item =>
                 <Link href={item.link}>
-                  <Col xs={4} sm={4} md={4} lg={6} xl={4} className={styles.columnBlock}>
+                  <Col xs={4} sm={4} md={4} lg={4} xl={4} className={styles.columnBlock}>
                     <Row noGutters className={styles.blockContent}>
                       <Col xs={12} sm={12} md={12} lg={12} xl={12} className={styles.iconContainer}><img className={styles.icon} src={item.icon} /></Col>
                       <Col>

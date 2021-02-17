@@ -9,12 +9,13 @@
 }
 
 .mobileContainer {
-    position: absolute;
-    bottom: 0px;
+    justify-self: bottom;
     background: $primary-dashboard;
     width: 100%;
     height: 60px;
-    z-index: 2;
+    z-index: 5;
+    position:absolute;
+    bottom: 0px;
 }
 
 .mobileItemContainer {

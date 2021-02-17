@@ -5,8 +5,9 @@ import DashNav from '../dashboard/DashNav';
 function DashLayout(props) {
     return (
         <>
-            <DashNav/> 
-           {props.children}
+         <DashNav/>   
+        {props.children}
+           
         </>
     )
 }
