@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { productsMock } from './productsMOCK'
 import ItemsCarousel from 'react-items-carousel';
 import "react-multi-carousel/lib/styles.css"
 import { Col } from 'react-bootstrap'
@@ -7,12 +6,11 @@ import styles from './Products.module.scss'
 import HumanButton from '../button/Button'
 import { useViewport } from "../../customHooks"
 
-
-function Products() {
+function Products(products) {
     const [numberOfSlides, setNumberOfSlides] = React.useState(0);
+    const [activeItemIndex, setActiveItemIndex] = useState(0);
     const { width } = useViewport();
     const breakpoint = 922;
-    const [activeItemIndex, setActiveItemIndex] = useState(0);
 
     useEffect(() => {
         if (width < breakpoint) {
@@ -41,9 +39,9 @@ function Products() {
                 rightChevronWrapper: "rightChevronWrapper",
                 leftChevronWrapper: "leftChevronWrapper"}}
                 >
-            {productsMock.map(product =>
+            {products.data.map(product =>
                 <Col key={product.id} className={styles.card}>
-                    <img className={styles.image} src={product.image} alt="product-image" />
+                    <img className={styles.image} src='https://picsum.photos/id/163/250/300' alt="product-image" />
                     <div className={styles.buttonContainer}>
                             <HumanButton
                                 style={"mobile"}
