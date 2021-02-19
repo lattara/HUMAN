@@ -12,7 +12,6 @@
 }
 
 .modal h4 {
-    width: 120%;
     font-family: $font-primary;
     font-size: 2.5em;
     border-bottom: 3px solid black;
@@ -29,4 +28,11 @@ background-color: $primary-yellow;
 padding: 5px 15px 5px 15px;
 border-radius: 5px;
 margin: 50px 10px 0px 0px;
+}
+
+@media (min-width: 922px) {  
+    .modal h4 {
+        width: 120%;
+    }
+
 }

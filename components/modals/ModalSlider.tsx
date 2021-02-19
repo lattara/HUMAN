@@ -7,22 +7,22 @@ function ModalSlider() {
         <div>
             <Carousel>
                 <div>
-                    <img src="https://picsum.photos/400/500?img=1" />
+                    <img src="https://picsum.photos/300/400?img=1" />
                 </div>
                 <div>
-                    <img src="https://picsum.photos/400/500?img=2" />
+                    <img src="https://picsum.photos/300/400?img=2" />
                 </div>
                 <div>
-                    <img src="https://picsum.photos/400/500?img=3" />
+                    <img src="https://picsum.photos/300/400?img=3" />
                 </div>
                 <div>
-                    <img src="https://picsum.photos/400/500?img=3" />
+                    <img src="https://picsum.photos/300/400?img=3" />
                 </div>
                 <div>
-                    <img src="https://picsum.photos/400/500?img=3" />
+                    <img src="https://picsum.photos/300/400?img=3" />
                 </div>
                 <div>
-                    <img src="https://picsum.photos/400/500?img=3" />
+                    <img src="https://picsum.photos/300/400?img=3" />
                 </div>
             </Carousel>
 
