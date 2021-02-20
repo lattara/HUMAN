@@ -64,8 +64,11 @@ function DashProductForm() {
                     <label htmlFor="category">Catégorie du produit</label>
                     <div style={{ display: "flex" }}>
 
+                    <label htmlFor="category">Collier</label>
                     <input type="radio" name="category" value="necklace" onChange={formik.handleChange} />
+                    <label htmlFor="category">Bracelet</label>
                     <input type="radio" name="category" value="bracelet" onChange={formik.handleChange} />
+                    <label htmlFor="category">Boucle d'oreille</label>
                     <input type="radio" name="category" value="earing" onChange={formik.handleChange} />
 
                     </div>
