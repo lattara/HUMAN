@@ -1,12 +1,8 @@
 import React from 'react'
-import { Formik, Field, Form, FormikHelpers, useFormik, FormikProvider, FieldArray } from 'formik';
-import HumanButton from '../button/Button';
-import ReactChip from 'react-chip'
+import { Formik, Field, Form, useFormik, FormikProvider } from 'formik';
 import Button from '@material-ui/core/Button';
 import { Row } from 'react-bootstrap';
-import { resourceLimits } from 'worker_threads';
-import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
-import { text } from '@fortawesome/fontawesome-svg-core';
+import styles from './DashForm.module.scss'
 
 const onSubmit = values => { alert("form sent") }
 const initialValues = {
@@ -24,11 +20,11 @@ const validate = values => {
     }
 
     if (!values.name) {
-        errors.name = "name is mandatory"
+        errors.name = "Le champ de nom est obligatoire"
     }
 
-    if (!values.message) {
-        errors.message = "message is mandatory"
+    if (!values.category) {
+        errors.message = "Sélectionnez la catégorie des produits"
     }
 
     return errors
@@ -42,7 +38,6 @@ function DashProductForm() {
         validate: validate
     })
 
-    const test=(value)=>{console.log(value)}
 
     return (
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit} >
@@ -62,15 +57,15 @@ function DashProductForm() {
                     {formik.errors.name && formik.touched.name && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
 
                     <label htmlFor="category">Catégorie du produit</label>
-                    <div style={{ display: "flex" }}>
 
-                    <label htmlFor="category">Collier</label>
-                    <input type="radio" name="category" value="necklace" onChange={formik.handleChange} />
-                    <label htmlFor="category">Bracelet</label>
-                    <input type="radio" name="category" value="bracelet" onChange={formik.handleChange} />
-                    <label htmlFor="category">Boucle d'oreille</label>
-                    <input type="radio" name="category" value="earing" onChange={formik.handleChange} />
-
+                    <div className={styles.radioButtons}>
+                        <img src="/necklace.png" alt="" />
+                        <input type="radio" name="category" value="necklace" onChange={formik.handleChange} />
+                        <img src="/bracelet.png" alt="" />
+                        <input type="radio" name="category" value="bracelet" onChange={formik.handleChange} />
+                        <img src="/earrings.png" alt="" />
+                        <input type="radio" name="category" value="earing" onChange={formik.handleChange} />
+                        {formik.errors.category && formik.touched.category && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
                     </div>
 
 
