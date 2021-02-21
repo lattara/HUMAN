@@ -8,14 +8,19 @@ const onSubmit = values => { alert("form sent") }
 const initialValues = {
     name: '',
     category: '',
+    description:'',
+    price: '',
     tags: [],
     images: [],
-    price: '',
 }
 
 const validate = values => {
     let errors = {
         name: '',
+        category: '',
+        description:'',
+        price: '',
+        tags:[],
         message: ''
     }
 
@@ -23,8 +28,16 @@ const validate = values => {
         errors.name = "Le champ de nom est obligatoire"
     }
 
-    if (!values.category) {
-        errors.message = "Sélectionnez la catégorie des produits"
+    if (!values.description) {
+        errors.description = "La description du produit est obligatoire"
+    }
+
+    if (!values.price) {
+        errors.price = "Veuillez saisir le prix du produit"
+    }
+
+    if (values.tags.length === 0) {
+        errors.price = "Veuillez saisir le prix du produit"
     }
 
     return errors
@@ -45,7 +58,7 @@ function DashProductForm() {
                 <Form onSubmit={formik.handleSubmit}
                     action="/multiple-upload" method="POST"
                     encType="multipart/form-data">
-                    <label htmlFor="nom">Nom de produit</label>
+                    <label htmlFor="name">Nom de produit</label>
                     <Field
                         id="name"
                         name="name"
@@ -54,7 +67,11 @@ function DashProductForm() {
                         value={formik.values.name}
                         formentry
                     />
-                    {formik.errors.name && formik.touched.name && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
+                    {formik.errors.name &&
+                        formik.touched.name &&
+                        formik.isValid === false ?
+                        <div className={styles.error}>{formik.errors.name}</div>
+                        : null}
 
                     <label htmlFor="category">Catégorie du produit</label>
 
@@ -65,44 +82,48 @@ function DashProductForm() {
                         <input type="radio" name="category" value="bracelet" onChange={formik.handleChange} />
                         <img src="/earrings.png" alt="" />
                         <input type="radio" name="category" value="earing" onChange={formik.handleChange} />
-                        {formik.errors.category && formik.touched.category && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
+                        {/* here errors for radio buttons */}
                     </div>
 
 
-
-                    <label htmlFor="nom">Description de produit</label>
+                    <label htmlFor="description">Description de produit</label>
                     <Field as="textarea"
-                        id="name"
-                        name="name"
-                        placeholder="Votre nom ici.."
+                        id="description"
+                        name="description"
+                        placeholder="Description of the product here"
                         onChange={formik.handleChange}
-                        value={formik.values.name}
+                        value={formik.values.description}
                         formentry
                     />
-                    {formik.errors.name && formik.touched.name && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
+                    {formik.errors.description &&
+                        formik.touched.description &&
+                        formik.isValid === false ?
+                        <div className={styles.error}>{formik.errors.description}</div>
+                        : null}
 
 
-                    <label htmlFor="nom">Prix de produit</label>
+                    <label htmlFor="price">Prix de produit</label>
                     <Field
-                        id="name"
+                        type="number"
+                        id="price"
                         name="price"
                         placeholder="Votre nom ici.."
                         onChange={formik.handleChange}
-                        value={formik.values.name}
+                        value={formik.values.price}
                         formentry
                     />
-                    {formik.errors.name && formik.touched.name && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
+                    {formik.errors.price && formik.touched.price && formik.isValid === false ? <div className={styles.error}>{formik.errors.price}</div> : null}
 
-                    <label htmlFor="nom">Les labels</label>
-                    <Field as="textarea"
-                        id="name"
-                        name="name"
+                    <label htmlFor="tags">Les labels</label>
+                    <Field
+                        id="tags"
+                        name="tags"
                         placeholder="Votre nom ici.."
                         onChange={formik.handleChange}
-                        value={formik.values.name}
+                        value={formik.values.tags}
                         formentry
                     />
-                    {formik.errors.name && formik.touched.name && formik.isValid === false ? <div>{formik.errors.name}</div> : <div></div>}
+                    {formik.errors.tags && formik.touched.tags && formik.isValid === false ? <div className={styles.error}>{formik.errors.tags}</div> : null}
 
                     <label htmlFor="nom">Les photos</label>
                     <input type="file" multiple />

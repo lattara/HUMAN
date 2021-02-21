@@ -1,5 +1,10 @@
 @import "/styles/custom.pallette.scss";
 
+.error {
+    font-size: 10px;
+    color: $secondary-red;
+}
+
 
 .radioButtons {
     display: flex;
@@ -39,3 +44,4 @@
     background-color: #f66;
     
 }
+
