@@ -1,9 +1,41 @@
 @import "/styles/custom.pallette.scss";
 
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form input, .form textarea {
+    border: 1px solid lightgray;
+    height: 45px;
+}
+
+.form input[type="text"] {
+    border:none
+}
+
 .error {
     font-size: 10px;
     color: $secondary-red;
 }
+
+.thumbs {
+    max-width: 100px;
+}
+
+.thumbsContainer {
+    position: relative;
+    top:-25%;
+    left: 20px;
+}
+
+.thumbsContainer img {
+    margin-right: 20px;
+}
+
 
 // radio buttons styles
 
@@ -40,4 +72,12 @@
     background-color: #f66;
     
 }
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
 

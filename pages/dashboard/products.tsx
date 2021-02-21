@@ -23,20 +23,22 @@ function products() {
                         <h2>Des produits</h2>
                         <dd>Ici tu peux modifier / supprimer ton produits</dd>
                     </Col>
-                    <Col>
+                    <Col style={{ overflow: "scroll" }}>
                         <Table data={dataMOCK} />
                     </Col>
                 </Row>
             </Tab>
             <Tab eventKey="new" title="Ajouter de nouveaux produits">
-            <Row>
-                    <Col xs={12} sm={12} md={10} lg={10} xl={10}>
-                        <h2>Des produits</h2>
-                        <dd>Ici tu peux ajouter un nouveau produit</dd>
-                        <DashProductForm />
+                <Row >
+                    <Col>
+                        <Row>
+                            <h2>Des produits</h2>
+                            <dd>Ici tu peux ajouter un nouveau produit</dd>
+                            <Col xs={12} sm={12} md={10} lg={12} xl={12}><DashProductForm /></Col>
+                        </Row>
                     </Col>
-                    </Row>
-               
+                </Row>
+
             </Tab>
         </Tabs>
 

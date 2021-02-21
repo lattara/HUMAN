@@ -119,6 +119,26 @@ input {
   min-height: 30px;
 }
 
+.dropzone {
+  min-height: 140px;
+  padding: 20px;
+  border: 1px dashed $secondary-red-opacity;
+  border-radius: 15px;
+  background-color: white;
+}
+
+//chip input styles
+
+.WAMuiChipInput-inputRoot-2 {
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  padding-top: 0px !important;
+}
+
+
+
 
 
 @media (min-width: 768px) { 
@@ -151,6 +171,12 @@ input {
   background: $primary-yellow-opacity !important;
   color: $black !important;
 }
+
+//dropzone
+
+
+
+
 
 }
 
