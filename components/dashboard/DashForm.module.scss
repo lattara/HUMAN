@@ -5,10 +5,7 @@
     color: $secondary-red;
 }
 
-
-.radioButtons {
-    display: flex;
-}
+// radio buttons styles
 
 .radioButtons input {
     max-width: 100px;
@@ -22,7 +19,6 @@
  max-width: 50px;
 }
 
-// radio buttons styles
 
 .radioButtons input[type="radio"] {
     background-color: transparent;

@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Formik, Field, Form, useFormik, FormikProvider } from 'formik';
 import Button from '@material-ui/core/Button';
 import { Row } from 'react-bootstrap';
 import styles from './DashForm.module.scss'
+import ChipInput from 'material-ui-chip-input'
 
 const onSubmit = values => { alert("form sent") }
 const initialValues = {
     name: '',
     category: '',
-    description:'',
+    description: '',
     price: '',
     tags: [],
     images: [],
@@ -18,9 +19,9 @@ const validate = values => {
     let errors = {
         name: '',
         category: '',
-        description:'',
+        description: '',
         price: '',
-        tags:[],
+        tags: '',
         message: ''
     }
 
@@ -36,9 +37,9 @@ const validate = values => {
         errors.price = "Veuillez saisir le prix du produit"
     }
 
-    if (values.tags.length === 0) {
-        errors.price = "Veuillez saisir le prix du produit"
-    }
+     if (values.tags.length === 0) {
+        errors.tags = "Ajouter au moins un tag"
+     }
 
     return errors
 }
@@ -50,6 +51,7 @@ function DashProductForm() {
         onSubmit: onSubmit,
         validate: validate
     })
+    const [tagsState, setTagsState] = useState(formik.values.tags)
 
 
     return (
@@ -114,16 +116,21 @@ function DashProductForm() {
                     />
                     {formik.errors.price && formik.touched.price && formik.isValid === false ? <div className={styles.error}>{formik.errors.price}</div> : null}
 
+
                     <label htmlFor="tags">Les labels</label>
-                    <Field
+                    <p>Ecrivez du texte puis appuyez sur Entrée pour ajouter une label</p>
+                    <ChipInput
                         id="tags"
-                        name="tags"
-                        placeholder="Votre nom ici.."
-                        onChange={formik.handleChange}
+                        fullWidth
                         value={formik.values.tags}
-                        formentry
+                        onChange={value => formik.setFieldValue("tags", value)}
+                        onDelete={(value, index) => setTagsState(formik.values.tags.splice(index, 1))}
                     />
-                    {formik.errors.tags && formik.touched.tags && formik.isValid === false ? <div className={styles.error}>{formik.errors.tags}</div> : null}
+                    {formik.errors.tags && formik.touched.tags && formik.values.tags.length === 0 && formik.isValid === false ? <div className={styles.error}>{formik.errors.tags}</div> : null}
+
+
+
+
 
                     <label htmlFor="nom">Les photos</label>
                     <input type="file" multiple />
