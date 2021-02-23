@@ -98,7 +98,7 @@ function DashProductForm() {
                             placeholder="Nom de produit ici ..."
                             onChange={formik.handleChange}
                             value={formik.values.name}
-                            formentry
+                            formentry={"true"}
                         />
                         {formik.errors.name &&
                             formik.touched.name &&
@@ -126,7 +126,7 @@ function DashProductForm() {
                             placeholder="Description of the product here"
                             onChange={formik.handleChange}
                             value={formik.values.description}
-                            formentry
+                            formentry={"true"}
                         />
                         {formik.errors.description &&
                             formik.touched.description &&
@@ -143,7 +143,7 @@ function DashProductForm() {
                             placeholder="Votre nom ici.."
                             onChange={formik.handleChange}
                             value={formik.values.price}
-                            formentry
+                            formentry={"true"}
                         />
                         {formik.errors.price && formik.touched.price && formik.isValid === false ? <div className={styles.error}>{formik.errors.price}</div> : null}
 

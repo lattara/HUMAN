@@ -14,7 +14,6 @@ function Products(products) {
     const { width } = useViewport();
     const breakpoint = 922;
 
-
     useEffect(() => {
         if (width < breakpoint) {
             setNumberOfSlides(1)
@@ -41,9 +40,8 @@ function Products(products) {
                 itemsWrapper: "itemsWrapper",
                 rightChevronWrapper: "rightChevronWrapper",
                 leftChevronWrapper: "leftChevronWrapper"
-            }}
-        >
-            {products.data.map(product =>
+            }}>
+            {products.products.map(product =>
                 <Col key={product.id} className={styles.card}>
                     <img className={styles.image} src='https://picsum.photos/id/163/250/300' alt="product-image" />
                     <div className={styles.buttonContainer}>
@@ -64,8 +62,8 @@ function Products(products) {
                 </Col>
             )}
             <ProductModal
-                show={modalShow} product={products.data[activeItemIndex]} onHide={() => setModalShow(false)}
-            /> 
+                show={modalShow} product={products[activeItemIndex]} onHide={() => setModalShow(false)}
+            />   
         </ItemsCarousel>
 
 

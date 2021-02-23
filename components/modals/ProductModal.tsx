@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './ProductModal.module.scss'
 import { Modal, Col, Row } from 'react-bootstrap';
 import HumanButton from '../button/Button';
@@ -6,6 +6,9 @@ import ModalSlider from './ModalSlider';
 
 
 function ProductModal(props) {
+
+console.log(props)
+
     return (
         <Modal
             {...props}
@@ -22,12 +25,12 @@ function ProductModal(props) {
                         {/* <img src="/presentation1.png" alt=""   /> */}
                         <ModalSlider />
                     </Col>
-                    <Col lg={4}>
+                     {/* <Col lg={4}>
                         <h4>{props.product.name}</h4>
                         <p> {props.product.description}</p>
                         <p>{props.product.price},00€</p>
                         <Row>{props.product.tags.map(tag => <div key={props.product.tags.indexOf(tag)} className={styles.tag}>{tag}</div>)}</Row>
-                    </Col>
+                    </Col>  */}
                 </Row>
             </Modal.Body>
             <Modal.Footer className={styles.header}>
