@@ -1,26 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Table from '@material-ui/core/Table';
 import TableContainer from '@material-ui/core/TableContainer';
-import { Box, Collapse, IconButton, Paper, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
+import { Paper, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core'
 import styles from "./HumanTable.module.scss"
-import { Col, Row } from 'react-bootstrap';
-
 
 
 function HumanTable(data) {
-    const [headers, setHeaders] = useState([])
-    const [rows, setRows] = useState([])
-
-    useEffect(() => {
-        setHeaders(Object.keys(data.data[0]))
-        setRows(data.data.map(row => row))
-    }, [])
+    const headers = Object.keys(data.data[0])
+    const rows = data.data.map(row=>row)
 
     return (
         <TableContainer component={Paper} >
             <Table>
             <TableHead>
-                <TableRow key={headers.indexOf()}>
+                <TableRow key={headers.indexOf(rows)}>
                     {headers.map(header => <TableCell className={styles.headers}>{header}</TableCell>)}
                 </TableRow>
             </TableHead>
@@ -35,7 +28,7 @@ function HumanTable(data) {
                     </TableRow>)
                 }
             </TableBody>
-            </Table>
+            </Table> 
         </TableContainer>
     )
 }

@@ -1,6 +1,6 @@
 
 
-export const productModel = {
+export interface ProductModel {
     name: {
         type: String,
         
@@ -25,7 +25,7 @@ export const productModel = {
         default: false,
     },
     tags: {
-        type: Array,
+        type: Array<string>,
         
     } 
 

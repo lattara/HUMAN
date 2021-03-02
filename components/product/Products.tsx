@@ -7,7 +7,7 @@ import HumanButton from '../button/Button'
 import { useViewport } from "../../customHooks"
 import ProductModal from '../modals/ProductModal';
 
-function Products(products) {
+function Products({products, error}) {
     const [modalShow, setModalShow] = React.useState(false);
     const [numberOfSlides, setNumberOfSlides] = React.useState(0);
     const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -41,8 +41,8 @@ function Products(products) {
                 rightChevronWrapper: "rightChevronWrapper",
                 leftChevronWrapper: "leftChevronWrapper"
             }}>
-            {products.products.map(product =>
-                <Col key={product.id} className={styles.card}>
+            {products.map(product =>
+                <Col className={styles.card}>
                     <img className={styles.image} src='https://picsum.photos/id/163/250/300' alt="product-image" />
                     <div className={styles.buttonContainer}>
                         <HumanButton
@@ -62,12 +62,9 @@ function Products(products) {
                 </Col>
             )}
             <ProductModal
-                show={modalShow} product={products[activeItemIndex]} onHide={() => setModalShow(false)}
-            />   
+                show={modalShow} product={activeItemIndex} onHide={() => setModalShow(false)}
+            />    
         </ItemsCarousel>
-
-
-
     )
 }
 

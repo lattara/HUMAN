@@ -79,9 +79,6 @@ function DashProductForm() {
         files.forEach(file => URL.revokeObjectURL(file.preview));
     }, [files]);
 
-
-
-
     return (
         <Formik value={formik} initialValues={initialValues} onSubmit={onSubmit} >
             {({ values }) => (

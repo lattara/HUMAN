@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Table from '../../components/table/HumanTable'
 import { dataMOCK } from "../../components/table/data.MOCK"
 import { Row, Col, Tab, Tabs } from 'react-bootstrap'
 import DashProductForm from '../../components/dashboard/DashProductForm';
+import { ProductModel } from '../../models/product.interface'
+import { Product } from '../../api/product.api'
+import HumanTable from '../../components/table/HumanTable';
 
+const products = () => {
+    const [key, setKey] = useState('list');
+	const [products, setProducts] = useState([])
+	const [isError, setIsError] = useState()
 
-function products() {
-    const [key, setKey] = useState('new');
-
-
+	useEffect(() => {
+		 Product.getProducts()
+			.then(data => setProducts(data))
+			.catch(err => setIsError(err))
+	}, [])
 
     return (
 
@@ -24,7 +32,7 @@ function products() {
                         <dd>Ici tu peux modifier / supprimer ton produits</dd>
                     </Col>
                     <Col style={{ overflow: "scroll" }}>
-                        <Table data={dataMOCK} />
+                         <HumanTable data={products} /> 
                     </Col>
                 </Row>
             </Tab>
