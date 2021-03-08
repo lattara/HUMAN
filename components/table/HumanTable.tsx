@@ -4,7 +4,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import { Paper, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core'
 import styles from "./HumanTable.module.scss"
 
-
 function HumanTable(data) {
     const headers = Object.keys(data.data[0])
     const rows = data.data.map(row=>row)
